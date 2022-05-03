@@ -10,16 +10,25 @@ on:
     workflow_dispatch:
 
 jobs:
-    deploy:
-    name: Deploying to Testflight
-    runs-on: macOS-latest
-    
+   test:
+    name: Test
+    runs-on: macos-latest
+    strategy:
+        matrix:
+          destination: ['platform=iOS Simulator,OS=13.2.2,name=iPhone 11 Pro Max']
     steps:
-        name: Checkout repository
-        uses: actions/checkout@v1
-        
-        name: Deploy iOS Beta to TestFlight via Fastlane
-        uses: maierj/fastlane-action@v1.4.0
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Build
+        run: |
+          xcodebuild clean build -project GHFollowers.xcodeproj -scheme GHFollowers -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+        env:
+         destination: ${{ matrix.destination }}
+      - name: Test
+        run: |
+          xcodebuild clean test -project GHFollowers.xcodeproj -scheme GHFollowersTests -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+        env:
+         destination: ${{ matrix.destination }}
 #    steps:
 #        name: Checkout repository
 #        uses: actions/checkout@v1
