@@ -4,18 +4,41 @@ name: CI
 
 #name: Swift
 
-on: [push]
-
-jobs:
-  build:
-
-    runs-on: macos-latest
-
-    steps:
-      - uses: actions/checkout@v3
-      - name: Build
-        run:  build
-      
+#on: [push]
+#
+#jobs:
+#  build:
+#
+#    runs-on: macos-latest
+#
+#    steps:
+#      - uses: actions/checkout@v3
+#      - name: Build
+#        run:  build
+  
+  actions:
+  - action: "Build application"
+    type: "NATIVE_BUILD_MAC_FASTLANE"
+    working_directory: "/Users/buddy/build"
+    commands:
+    - "fastlane snapshot"
+    sync_paths:
+    - pipeline_path: "/"
+      vm_path: "/Users/buddy/build"
+      direction: "PIPELINE_TO_VM"
+      excludes: ""
+    - pipeline_path: "/"
+      vm_path: "/Users/buddy/build"
+      direction: "VM_TO_PIPELINE"
+      excludes: ""
+    pre_start_simulators:
+    - "iPhone 13 Pro Max"
+    node_version: "14"
+    certificates:
+    - "myCert"
+    provision_profiles:
+    - "myProfile"
+    xcode_version: "13"
         
 ## Controls when the workflow will run
 #on:
