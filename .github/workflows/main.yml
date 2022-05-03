@@ -1,49 +1,90 @@
 name: CI
-on:
-    push:
-        branches: [main]
-    pull_request:
-        branches: [main]
 
-    
-    # Allows you to run this workflow manually from the Actions a tab
-    workflow_dispatch:
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-   test:
-    name: Test
+  build-ios:
     runs-on: macos-latest
-    strategy:
-        matrix:
-          destination: ['platform=iOS Simulator,OS=13.2.2,name=iPhone 11 Pro Max']
     steps:
-      - name: Checkout
-        uses: actions/checkout@main
-      - name: Build
-        run: |
-          xcodebuild clean build -project GitHubCICD.xcodeproj
-        uses: fastlane
+      - uses: actions/checkout@v2
+      
+      - name: configure node
+        uses: actions/setup-node@v1
         with:
-            lane : beta
-#    steps:
-#        name: Checkout repository
-#        uses: actions/checkout@v1
-#        - name: Deploy iOS Beta to TestFlight via Fastlane
-#        uses: maierj/fastlane-action@v1.4.0
-#        with:
-#            lane: beta
-#        env:
-#            APP_STORE_CONNECT_TEAM_ID: '${{ secrets.APP_STORE_CONNECT_TEAM_ID }}'
-#            DEVELOPER_APP_ID: '${{ secrets.DEVELOPER_APP_ID }}'
-#            DEVELOPER_APP_IDENTIFIER: '${{ secrets.DEVELOPER_APP_IDENTIFIER }}'
-#            DEVELOPER_PORTAL_TEAM_ID: '${{ secrets.DEVELOPER_PORTAL_TEAM_ID }}'
-#            FASTLANE_APPLE_ID: '${{ secrets.FASTLANE_APPLE_ID }}'
-#            FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: '${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}'
-#            MATCH_PASSWORD: '${{ secrets.MATCH_PASSWORD }}'
-#            GIT_AUTHORIZATION: '${{ secrets.GIT_AUTHORIZATION }}'
-#            PROVISIONING_PROFILE_SPECIFIER: '${{ secrets.PROVISIONING_PROFILE_SPECIFIER }}'
-#            TEMP_KEYCHAIN_PASSWORD: '${{ secrets.TEMP_KEYCHAIN_PASSWORD }}'
-#            TEMP_KEYCHAIN_USER: '${{ secrets.TEMP_KEYCHAIN_USER }}'
-#            APPLE_KEY_ID: '${{ secrets.APPLE_KEY_ID }}'
-#            APPLE_ISSUER_ID: '${{ secrets.APPLE_ISSUER_ID }}'
-#            APPLE_KEY_CONTENT: '${{ secrets.APPLE_KEY_CONTENT }}'
+          node-version: "14.x"
+          registry-url: "https://registry.npmjs.org"
+      
+      - name: configure ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0
+
+      - name: create macos keychain
+        uses: sinoru/actions-setup-keychain@v1.0
+
+      - name: install fastlane & plugins
+        run: bundle install
+      
+      - name: homebrew & watchman
+        run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" && brew update && brew install watchman
+
+      - name: yarn install
+        run: yarn install
+
+      - name: re-pod
+        run: cd ios && pod deintegrate && pod install && cd ..
+
+      - name: fastlane build
+        run: fastlane ios adhoc build
+
+      # upload failure log if fails
+      - uses: actions/upload-artifact@v1
+        name: upload failure fastlane build log
+        if: failure()
+        with:
+          name: App-App.log
+          path: /Users/runner/Library/Logs/gym/ App-App.log
+
+      - name: Make Artefact
+        run: |
+          zip artefact.zip App.ipa App.app.dSYM.zip
+      - uses: actions/upload-artifact@v1
+        with:
+          name: artefact.zip
+          path: ./artefact.zip
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+      
+      - name: Upload Beta Asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./artefact.zip
+          asset_name: artefact.zip
+          asset_content_type: application/zip
+          
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  MATCH_GIT_ACCOUNT: ${{secrets.MATCH_GIT_ACCOUNT}}
+  MATCH_GIT_BASIC_AUTHORIZATION_USER: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION_USER }}
+  MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }}
+  MATCH_CERT_REPO: ${{secrets.MATCH_CERT_REPO}}
+
+  MATCH_PASSWORD: ${{secrets.MATCH_PASSWORD}} # Match Decrypting Password
