@@ -22,7 +22,7 @@ jobs:
       - name: Build
         run: |
           xcodebuild clean build -project GitHubCICD.xcodeproj
-  
+        lane: beta
 #    steps:
 #        name: Checkout repository
 #        uses: actions/checkout@v1
