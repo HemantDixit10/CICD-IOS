@@ -1,21 +1,22 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
-
-#name: Swift
-
-on: [push]
-
-jobs:
-  build:
-
-    runs-on: macos-latest
-
-    steps:
-      - uses: actions/checkout@v1
-      - run: fastlane beta
-        env:
-          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+#name: CI
+#
+##name: Swift
+#
+#on: [push]
+#    branches: [main]
+#
+#jobs:
+#  build:
+#
+#    runs-on: macos-latest
+#
+#    steps:
+#      - uses: actions/checkout@v1
+#      - run: fastlane beta
+#        env:
+#          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
    
         
 ## Controls when the workflow will run
@@ -50,3 +51,70 @@ jobs:
 #        run: |
 #          echo Add other actions to build,
 #          echo test, and deploy your project.
+
+
+
+
+# Use the latest stable version of Semaphore 2.0 YML syntax:
+version: v1.0
+
+# Name your pipeline. If you choose to connect multiple pipelines with
+# promotions, the pipeline name will help you differentiate between
+# them. For example, you might have a build phase and a delivery phase.
+# For more information on promotions, see:
+# https://docs.semaphoreci.com/article/67-deploying-with-promotions
+name: CI
+
+on: [push]
+    branches: [main]
+    
+# The agent defines the environment in which your CI runs. It is a combination
+# of a machine type and an operating system image. For a project built with
+# Xcode you must use one of the Apple machine types, coupled with a macOS image
+# running either Xcode 10 or Xcode 11.
+# See https://docs.semaphoreci.com/article/20-machine-types
+# https://docs.semaphoreci.com/article/161-macos-mojave-xcode-10-image and
+# https://docs.semaphoreci.com/article/162-macos-mojave-xcode-11-image
+agent:
+  machine:
+    type: a1-standard-4
+    os_image: macos-mojave-xcode13
+
+# Blocks are the heart of a pipeline and are executed sequentially. Each block
+# has a task that defines one or more parallel jobs. Jobs define commands that
+# should be executed by the pipeline.
+# See https://docs.semaphoreci.com/article/62-concepts
+blocks:
+  
+
+  - name: Build app
+    task:
+      env_vars:
+        - name: LANG
+          value: en_US.UTF-8
+      secrets:
+        # Make the SSH key for the certificate repository and the MATCH_PASSWORD
+        # environment variable available.
+        # See https://docs.semaphoreci.com/article/109-using-private-dependencies
+        - name: match-secrets
+      prologue:
+        commands:
+          # Add the key for the match certificate repository to ssh
+          # See https://docs.semaphoreci.com/article/109-using-private-dependencies
+          - chmod 0600 ~/.ssh/*
+          # Add the key to the ssh agent:
+          - ssh-add ~/.ssh/*
+          # Continue with checkout as normal
+          - checkout
+          - cache restore
+          - bundle install --path vendor/bundle
+          - cache store
+      jobs:
+        - name: Build
+          commands:
+            - bundle exec xcversion select 11.2.1
+            - bundle exec fastlane beta
+
+            # Upload the IPA file as a job artifact.
+            # See https://docs.semaphoreci.com/article/155-artifacts
+            - artifact push job build/TallestTowers.ipa
