@@ -2,8 +2,6 @@
 
 name: CI
 
-#name: Swift
-
 on: [push]
 
 jobs:
