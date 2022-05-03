@@ -3,36 +3,37 @@
 name: CI
 
 on: [push]
+    branche: main
 
-jobs:
-    build:
-    
-    runs-on: macos-latest
-    
-    steps:
-    uses : actions/checkout@v1
-    run: fastlane beta
-        env:
-            MATCH_PASSWORD: ${{secrets.MATCH_PASSWORD}}
-
-
-
-#   jobs:
-#    deploy:
-#        name : Deploying to Testflight
+#jobs:
+#    build:
 #
-#    runs-on : macos-latest
+#    runs-on: macos-latest
 #
 #    steps:
-#        name: Checkout repository
-#        uses: actions/checkout@v1
-#
-#        name: Deploy iOS Beta to TestFlight via Fastlane
-#        uses: maierj/fastlane-action@v1.4.0
-#        with:
-#          lane: fastlane beta
+#    uses : actions/checkout@v1
+#    run: fastlane beta
 #        env:
-#          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+#            MATCH_PASSWORD: ${{secrets.MATCH_PASSWORD}}
+#
+
+
+   jobs:
+    deploy:
+        name : Deploying to Testflight
+
+    runs-on : macos-latest
+
+    steps:
+        name: Checkout repository
+        uses: actions/checkout@v1
+
+        name: Deploy iOS Beta to TestFlight via Fastlane
+        uses: maierj/fastlane-action@v1
+        with:
+          lane: fastlane beta
+        env:
+          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
 
 ## Controls when the workflow will run
 #on:
