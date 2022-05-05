@@ -22,18 +22,15 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
     
-    - name: install fastlane & plugins
-        run: bundle install
-        
     - name: Setup ruby
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: 3.0.0
         bundler-cache: true
-        
+            
     - name: Build & Distribute to Testflight
       run:
-        bundle exec fastlane beta
+        fastlane beta
       env:
         MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
         FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
