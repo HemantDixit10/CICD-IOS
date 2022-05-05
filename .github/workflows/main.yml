@@ -30,7 +30,7 @@ jobs:
             
     - name: Build & Distribute to Testflight
       run:
-        bundle update && bundle install
+        bundle install
         bundle exec fastlane beta
       env:
         MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
