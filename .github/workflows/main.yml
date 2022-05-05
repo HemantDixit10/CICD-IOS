@@ -25,12 +25,9 @@ jobs:
     - name: Setup ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 3.0.0
+        ruby-version: 2.7.2
         bundler-cache: true
-            
-    - name: Bundle Install
-        uses: ruby/setup-ruby/bundler
-        
+    
     - name: Build & Distribute to Testflight
       run:
         bundle exec fastlane beta
