@@ -18,7 +18,7 @@ jobs:
       run : sudo xcode-select -s /Applications/Xcode.app
 
     - name: Setup ruby
-        uses: ruby/setup-ruby@v2
+        uses: ruby/setup-ruby@v1
         with:
         ruby-version: 3.0.0
         bundler-cache: true
