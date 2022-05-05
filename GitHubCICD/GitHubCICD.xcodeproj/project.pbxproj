@@ -10,8 +10,8 @@
 		CD9EAB202823EDB20011A78F /* report.xml in Resources */ = {isa = PBXBuildFile; fileRef = CD9EAB1D2823EDB20011A78F /* report.xml */; };
 		CD9EAB212823EDB20011A78F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CD9EAB1E2823EDB20011A78F /* README.md */; };
 		CD9EAB232823EFF20011A78F /* Matchfile in Resources */ = {isa = PBXBuildFile; fileRef = CD9EAB222823EFF20011A78F /* Matchfile */; };
-		CD9EAB262823FB750011A78F /* Gemfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = CD9EAB242823FB750011A78F /* Gemfile.lock */; };
-		CD9EAB272823FB750011A78F /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = CD9EAB252823FB750011A78F /* Gemfile */; };
+		CD9EAB2A2823FF6C0011A78F /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = CD9EAB282823FF6C0011A78F /* Gemfile */; };
+		CD9EAB2B2823FF6C0011A78F /* Gemfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = CD9EAB292823FF6C0011A78F /* Gemfile.lock */; };
 		CDE56DC028212C8700734604 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE56DBF28212C8700734604 /* AppDelegate.swift */; };
 		CDE56DC228212C8700734604 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE56DC128212C8700734604 /* SceneDelegate.swift */; };
 		CDE56DC428212C8700734604 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE56DC328212C8700734604 /* ViewController.swift */; };
@@ -26,8 +26,8 @@
 		CD9EAB1D2823EDB20011A78F /* report.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = report.xml; sourceTree = "<group>"; };
 		CD9EAB1E2823EDB20011A78F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CD9EAB222823EFF20011A78F /* Matchfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Matchfile; sourceTree = "<group>"; };
-		CD9EAB242823FB750011A78F /* Gemfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
-		CD9EAB252823FB750011A78F /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		CD9EAB282823FF6C0011A78F /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		CD9EAB292823FF6C0011A78F /* Gemfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
 		CDE56DBC28212C8700734604 /* GitHubCICD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubCICD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE56DBF28212C8700734604 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDE56DC128212C8700734604 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,8 +54,8 @@
 		CDE56DB328212C8700734604 = {
 			isa = PBXGroup;
 			children = (
-				CD9EAB252823FB750011A78F /* Gemfile */,
-				CD9EAB242823FB750011A78F /* Gemfile.lock */,
+				CD9EAB282823FF6C0011A78F /* Gemfile */,
+				CD9EAB292823FF6C0011A78F /* Gemfile.lock */,
 				CDE56DD328212E4200734604 /* fastlane */,
 				CDE56DBE28212C8700734604 /* GitHubCICD */,
 				CDE56DBD28212C8700734604 /* Products */,
@@ -154,9 +154,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD9EAB262823FB750011A78F /* Gemfile.lock in Resources */,
+				CD9EAB2B2823FF6C0011A78F /* Gemfile.lock in Resources */,
+				CD9EAB2A2823FF6C0011A78F /* Gemfile in Resources */,
 				CDE56DD728212E4200734604 /* Fastfile in Resources */,
-				CD9EAB272823FB750011A78F /* Gemfile in Resources */,
 				CDE56DD628212E4200734604 /* Appfile in Resources */,
 				CDE56DCC28212C8C00734604 /* LaunchScreen.storyboard in Resources */,
 				CDE56DC928212C8C00734604 /* Assets.xcassets in Resources */,
