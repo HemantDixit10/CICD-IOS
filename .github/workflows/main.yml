@@ -30,10 +30,6 @@ jobs:
             
     - name: Build & Distribute to Testflight
       run:
-        export GEM_HOME=\$HOME/.rvm/gems/ruby-2.5.0
-        export GEM_PATH=\$HOME/.rvm/gems/ruby-2.5.0:\$HOME/.rvm/gems/ruby-2.5.0@global
-        LANG=en_US.UTF-8
-        source "\$HOME/.rvm/scripts/rvm"
         bundle update && bundle install
         bundle exec fastlane beta
       env:
