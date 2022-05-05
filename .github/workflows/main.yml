@@ -21,9 +21,6 @@ jobs:
       with:
         key: ${{ secrets.SSH_KEY }}
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
-    
-     - name: fastlane bundle install
-       run : fastlane action bundle_install
 
     - name: Setup ruby
       uses: ruby/setup-ruby@v1
