@@ -28,9 +28,12 @@ jobs:
         ruby-version: 3.0.0
         bundler-cache: true
             
-    - name: Build & Distribute to Testflight
+    - name: Bundle Install
       run:
         bundle install
+        
+    - name: Build & Distribute to Testflight
+      run:
         bundle exec fastlane beta
       env:
         MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
