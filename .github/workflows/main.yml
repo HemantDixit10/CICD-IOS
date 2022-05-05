@@ -3,7 +3,6 @@ name: CI
 on:
   push:
     branches: [ main ]
-    
 jobs:
   deploy:
     name: Deploy
@@ -23,14 +22,14 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
     
+    - name: install fastlane & plugins
+        run: bundle install
+        
     - name: Setup ruby
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: 3.0.0
         bundler-cache: true
-    
-   - name: install fastlane & plugins
-        run: bundle install
         
     - name: Build & Distribute to Testflight
       run:
