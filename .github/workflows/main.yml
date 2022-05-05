@@ -29,8 +29,7 @@ jobs:
         bundler-cache: true
             
     - name: Bundle Install
-        uses: ruby/setup-ruby/bundler@v1
-        
+        uses: ruby/setup-ruby/bundler
         
     - name: Build & Distribute to Testflight
       run:
