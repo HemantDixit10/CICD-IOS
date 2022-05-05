@@ -27,9 +27,6 @@ jobs:
       with:
         ruby-version: 2.7.2
         bundler-cache: true
-        
-    - name: Install Pods
-      run: pod install
             
     - name: Build & Distribute to Testflight
       run: |
