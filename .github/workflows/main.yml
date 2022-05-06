@@ -23,7 +23,7 @@ jobs:
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
         
     - name: Cache RubyGems
-        uses: actions/cache@v1
+        uses: actions/cache/vendor/bundler@v1
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
@@ -32,8 +32,8 @@ jobs:
     - name: Setup ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.7.2
-        bundler-cache: true
+        ruby-version: 3.0.0
+        bundler-cache: false
             
     - name: Build & Distribute to Testflight
       run:
