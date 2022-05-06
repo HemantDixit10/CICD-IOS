@@ -21,17 +21,16 @@ jobs:
       with:
         key: ${{ secrets.SSH_KEY }}
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
-    
+
     - name: Setup ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 3.0.0
+        ruby-version: 2.7.2
         bundler-cache: true
         
     - name: Setup Fastlane
       uses: fastlane/setup-fastlane
-        
-        
+            
     - name: Build & Distribute to Testflight
       run:
         bundle exec fastlane beta
