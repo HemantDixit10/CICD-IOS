@@ -26,11 +26,7 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: 3.0.0
-        bundler-cache: false
-    
-    - run: gem install bundler
-      - run: cd ${{ GitHubCICD.xcodeproj }}
-      - run: bundle install
+        bundler-cache: true
       
     - name: Build & Distribute to Testflight
       run:
