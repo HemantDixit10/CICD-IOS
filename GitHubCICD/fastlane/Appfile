@@ -6,3 +6,7 @@ team_id("327TPG23FM") # Developer Portal Team ID
 
 # For more information about the Appfile, see:
 #     https://docs.fastlane.tools/advanced/#appfile
+
+app_target_bundle_identifier = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
+project = "GitHubCICD.xcodeproj"
+keychain_name = "GitHubCICD"
