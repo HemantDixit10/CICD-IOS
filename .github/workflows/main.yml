@@ -27,9 +27,10 @@ jobs:
       with:
         ruby-version: 3.0.0
         bundler-cache: true
-            
-    - name: Bundle Install
-        uses: ruby/setup-ruby/bundler
+        
+    - name: Setup Fastlane
+      uses: fastlane/setup-fastlane
+        
         
     - name: Build & Distribute to Testflight
       run:
