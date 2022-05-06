@@ -23,7 +23,7 @@ jobs:
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
     
      - name: Bundle dependencies
-      run: bundle install --system
+      uses: bundle env
       
     - name: Setup ruby
       uses: ruby/setup-ruby@v1
