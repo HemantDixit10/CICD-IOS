@@ -29,7 +29,8 @@ jobs:
         bundler-cache: true
     
     - name: Bundle dependencies
-      run: bundle install --path vendor/bundle
+        path: bundle config set path 'vendor'
+      run: bundle install
       
     - name: Build & Distribute to Testflight
       run:
