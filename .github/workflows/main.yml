@@ -21,7 +21,14 @@ jobs:
       with:
         key: ${{ secrets.SSH_KEY }}
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
-
+        
+    - name: Cache RubyGems
+        uses: actions/cache@v1
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: ${{ runner.os }}-gem-
+          
     - name: Setup ruby
       uses: ruby/setup-ruby@v1
       with:
