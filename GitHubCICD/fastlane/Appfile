@@ -10,8 +10,3 @@ team_id("327TPG23FM") # Developer Portal Team ID
 app_target_bundle_identifier = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
 project = "GitHubCICD.xcodeproj"
 keychain_name = "GitHubCICD"
-
-
-ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
-require 'bundler/setup' # Set up gems listed in the Gemfile.
-Bundler.require(:default)
