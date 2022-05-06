@@ -21,11 +21,7 @@ jobs:
       with:
         key: ${{ secrets.SSH_KEY }}
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
-    
-     - name: Bundle dependencies
-      uses: bundle env
-        with: bundle install --path ~/.rvm/gems/ruby-2.7.0-p247
-      
+        
     - name: Setup ruby
       uses: ruby/setup-ruby@v1
       with:
