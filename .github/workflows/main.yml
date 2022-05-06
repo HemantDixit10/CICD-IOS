@@ -27,9 +27,6 @@ jobs:
       with:
         ruby-version: 2.7.2
         bundler-cache: true
-        
-    - name: Setup Fastlane
-      run: fastlane init
             
     - name: Build & Distribute to Testflight
       run:
