@@ -29,7 +29,7 @@ jobs:
         bundler-cache: true
         
     - name: Setup Fastlane
-      uses: fastlane/setup-fastlane
+      run: fastlane init
             
     - name: Build & Distribute to Testflight
       run:
