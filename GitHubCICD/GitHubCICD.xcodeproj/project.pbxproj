@@ -12,7 +12,6 @@
 		CD9EAB232823EFF20011A78F /* Matchfile in Resources */ = {isa = PBXBuildFile; fileRef = CD9EAB222823EFF20011A78F /* Matchfile */; };
 		CDD86BAA2824E106003FAB1F /* fastlane match appstore in Resources */ = {isa = PBXBuildFile; fileRef = CDD86BA72824E106003FAB1F /* fastlane match appstore */; };
 		CDD86BAB2824E106003FAB1F /* fastlane match appstore.pub in Resources */ = {isa = PBXBuildFile; fileRef = CDD86BA82824E106003FAB1F /* fastlane match appstore.pub */; };
-		CDD86BAC2824E106003FAB1F /* gemfile in Resources */ = {isa = PBXBuildFile; fileRef = CDD86BA92824E106003FAB1F /* gemfile */; };
 		CDE56DC028212C8700734604 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE56DBF28212C8700734604 /* AppDelegate.swift */; };
 		CDE56DC228212C8700734604 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE56DC128212C8700734604 /* SceneDelegate.swift */; };
 		CDE56DC428212C8700734604 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE56DC328212C8700734604 /* ViewController.swift */; };
@@ -29,7 +28,6 @@
 		CD9EAB222823EFF20011A78F /* Matchfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Matchfile; sourceTree = "<group>"; };
 		CDD86BA72824E106003FAB1F /* fastlane match appstore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "fastlane match appstore"; sourceTree = "<group>"; };
 		CDD86BA82824E106003FAB1F /* fastlane match appstore.pub */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "fastlane match appstore.pub"; sourceTree = "<group>"; };
-		CDD86BA92824E106003FAB1F /* gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gemfile; sourceTree = "<group>"; };
 		CDE56DBC28212C8700734604 /* GitHubCICD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubCICD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE56DBF28212C8700734604 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDE56DC128212C8700734604 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +56,6 @@
 			children = (
 				CDD86BA72824E106003FAB1F /* fastlane match appstore */,
 				CDD86BA82824E106003FAB1F /* fastlane match appstore.pub */,
-				CDD86BA92824E106003FAB1F /* gemfile */,
 				CDE56DD328212E4200734604 /* fastlane */,
 				CDE56DBE28212C8700734604 /* GitHubCICD */,
 				CDE56DBD28212C8700734604 /* Products */,
@@ -159,7 +156,6 @@
 			files = (
 				CDE56DD728212E4200734604 /* Fastfile in Resources */,
 				CDE56DD628212E4200734604 /* Appfile in Resources */,
-				CDD86BAC2824E106003FAB1F /* gemfile in Resources */,
 				CDE56DCC28212C8C00734604 /* LaunchScreen.storyboard in Resources */,
 				CDE56DC928212C8C00734604 /* Assets.xcassets in Resources */,
 				CD9EAB202823EDB20011A78F /* report.xml in Resources */,
