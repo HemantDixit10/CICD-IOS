@@ -19,6 +19,7 @@
 		CDDC6DD2282A284600A174B0 /* Matchfile in Resources */ = {isa = PBXBuildFile; fileRef = CDDC6DCD282A284600A174B0 /* Matchfile */; };
 		CDDC6DD3282A284600A174B0 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = CDDC6DCE282A284600A174B0 /* Gemfile */; };
 		CDDC6DD4282A284600A174B0 /* Gemfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = CDDC6DCF282A284600A174B0 /* Gemfile.lock */; };
+		CDDC6DD6282A47A100A174B0 /* Gymfile in Resources */ = {isa = PBXBuildFile; fileRef = CDDC6DD5282A47A100A174B0 /* Gymfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		CDDC6DCD282A284600A174B0 /* Matchfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Matchfile; sourceTree = "<group>"; };
 		CDDC6DCE282A284600A174B0 /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		CDDC6DCF282A284600A174B0 /* Gemfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
+		CDDC6DD5282A47A100A174B0 /* Gymfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gymfile; sourceTree = "<group>"; };
 		CDE56DBC28212C8700734604 /* GitHubCICD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubCICD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -65,6 +67,7 @@
 		CDDC6DCA282A284600A174B0 /* fastlane */ = {
 			isa = PBXGroup;
 			children = (
+				CDDC6DD5282A47A100A174B0 /* Gymfile */,
 				CDDC6DCB282A284600A174B0 /* Appfile */,
 				CDDC6DCC282A284600A174B0 /* Fastfile */,
 				CDDC6DCD282A284600A174B0 /* Matchfile */,
@@ -151,6 +154,7 @@
 			files = (
 				CDDC6DD4282A284600A174B0 /* Gemfile.lock in Resources */,
 				CDDC6DD3282A284600A174B0 /* Gemfile in Resources */,
+				CDDC6DD6282A47A100A174B0 /* Gymfile in Resources */,
 				CDDC6DD1282A284600A174B0 /* Fastfile in Resources */,
 				CDD86BCD2824F13E003FAB1F /* Info.plist in Resources */,
 				CDDC6DD0282A284600A174B0 /* Appfile in Resources */,
