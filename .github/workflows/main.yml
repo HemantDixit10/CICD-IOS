@@ -30,6 +30,8 @@ jobs:
 
     - name: Setup fastlane
       run: sudo gem install fastlane
+      
+    - name: Setup bundle
       uses: install bundle
   
     - name: Build & Distribute to Testflight
