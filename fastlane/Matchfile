@@ -1,14 +1,14 @@
 git_url("https://github.com/HemantDixit10/CICD-IOS.git")
 
 storage_mode("git")
-
+git_branch("main")
 type("appstore") # The default type, can be: appstore, adhoc, enterprise or development
 
 
- app_identifier(["com.CICI", "tools.fastlane.app2"])
- username("HemantDixit10") # Your Apple Developer Portal username
-shallow_clone("true")
-force_for_new_devices("true")
+app_identifier(["com.CICI", "tools.fastlane.app2"])
+username("HemantDixit10") # Your Apple Developer Portal username
+shallow_clone(true)
+force_for_new_devices(true)
 
 # For all available options run `fastlane match --help`
 # Remove the # in the beginning of the line to enable the other options
