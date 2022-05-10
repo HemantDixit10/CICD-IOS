@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     CFPropertyList (3.0.5)
       rexml
