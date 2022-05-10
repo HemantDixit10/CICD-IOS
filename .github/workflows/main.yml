@@ -31,8 +31,8 @@ jobs:
     - name: Setup fastlane
       run: sudo gem install fastlane -NV
         
-    - name: Clean Build
-    run : [sudo] gem cleanup
+    - name: Clean Updata
+        run : sudo gem cleanup
     
     - name: Build & Distribute to Testflight
       run:
