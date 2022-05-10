@@ -28,6 +28,9 @@ jobs:
         ruby-version: 2.7.0
         bundler-cache: true
 
+    - name: Setup fastlane
+      run: sudo gem install fastlane -NV
+        
     - name: Build & Distribute to Testflight
       run:
         fastlane beta
