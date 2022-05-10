@@ -12,5 +12,4 @@ type("appstore") # The default type, can be: appstore, adhoc, enterprise or deve
 
 # The docs are available on https://docs.fastlane.tools/actions/match
 
-git remote set-url origin https://github.com/HemantDixit10/CICD-IOS.git
 

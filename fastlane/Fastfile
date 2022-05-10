@@ -8,7 +8,8 @@ default_platform(:ios)
 platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
-    
+
+  git clone https://github.com/HemantDixit10/CICD-IOS.git /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/d20220510-5300-w45rxy
   sync_code_signing
   enable_automatic_code_signing(path: "GitHubCICD.xcodeproj")
   increment_build_number(xcodeproj: "GitHubCICD.xcodeproj")
