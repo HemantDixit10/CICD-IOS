@@ -31,12 +31,9 @@ jobs:
     - name: Setup fastlane
       run: sudo gem install fastlane
   
-  - name: Check Setup
-    uses: bundle check || bundle install --path vendor/bundle
-    
     - name: Build & Distribute to Testflight
       run:
-        fastlane beta
+        bundle exec fastlane beta
       env:
         MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
         FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
