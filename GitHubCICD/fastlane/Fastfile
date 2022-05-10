@@ -19,6 +19,23 @@ platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
   
+  output_directory = '.archives'
+output_name = 'GitHubCICD.ipa'
+output_file_path = "#{output_directory}/#{output_name}"
+
+# Build
+gym(project: project,
+    silent: true,
+    clean: true,
+    export_method: "app-store",
+    export_options: {
+      provisioningProfiles: {
+        app_target_bundle_identifier => app_target_profile_name
+      }
+    },
+    output_directory: output_directory,
+    output_name: output_name)
+    
   sync_code_signing
   enable_automatic_code_signing(path: "GitHubCICD.xcodeproj")
   increment_build_number(xcodeproj: "GitHubCICD.xcodeproj")
