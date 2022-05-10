@@ -26,6 +26,7 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: 3.0.0
+        bundler-cache: true
         
     - name: Publish to GPR
       run: |
@@ -42,7 +43,7 @@ jobs:
   
     - name: Build & Distribute to Testflight
       run:
-        bundle exec beta
+        bundle exec fastlane beta
       env:
         MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
         FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
