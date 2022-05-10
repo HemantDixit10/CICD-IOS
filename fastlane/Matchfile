@@ -7,11 +7,10 @@ type("appstore") # The default type, can be: appstore, adhoc, enterprise or deve
 
 app_identifier(["com.CICI", "tools.fastlane.app2"])
 username("HemantDixit10") # Your Apple Developer Portal username
-shallow_clone(true)
-force_for_new_devices(true)
+shallow_clone(false)
+force_for_new_devices(false)
 
-clone_branch_directly(true)
-clone_into("/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/d20220510-6767-cxgrjy"")
+clone_branch_directly(false)
 git_branch("main")
 
 # For all available options run `fastlane match --help`
