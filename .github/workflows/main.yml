@@ -27,7 +27,7 @@ jobs:
       with:
         ruby-version: 3.0.0
         bundler-cache: true
-        bundle-setup : bundle config build.pg --with-pg-config=/usr/pgsql-9.1/bin/pg_config
+        path: bundle config build.pg --with-pg-config=/usr/pgsql-9.1/bin/pg_config
 
     - name: Setup fastlane
       run: sudo gem install fastlane
