@@ -11,6 +11,7 @@ shallow_clone(true)
 force_for_new_devices(true)
 
 clone_branch_directly(true)
+clone_into("/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/d20220510-6767-cxgrjy"")
 
 # For all available options run `fastlane match --help`
 # Remove the # in the beginning of the line to enable the other options
