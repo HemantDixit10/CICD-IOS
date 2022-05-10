@@ -23,10 +23,11 @@ jobs:
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
         
     - name: Setup ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 3.0.0
-        bundler-cache: true
+    run : bundle install
+#      uses: ruby/setup-ruby@v1
+#      with:
+#        ruby-version: 3.0.0
+#        bundler-cache: true
 
     - name: Setup fastlane
       run: sudo gem install fastlane
