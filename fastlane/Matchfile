@@ -1,5 +1,5 @@
 clone_branch_directly(true)
-git_url("git+ssh://github.com/HemantDixit10/CICD-IOS.git")
+git_url("git@github.com:HemantDixit10/CICD-IOS.git"")
 
 storage_mode("git")
 
