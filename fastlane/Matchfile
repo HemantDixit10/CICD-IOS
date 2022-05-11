@@ -1,4 +1,4 @@
-git_url("git clone https://github.com/HemantDixit10/CICD-IOS.git /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/d20220511-5444-w9mkkd")
+
 
 storage_mode("git")
 
@@ -10,7 +10,7 @@ username("HemantDixit10") # Your Apple Developer Portal username
 shallow_clone(false)
 force_for_new_devices(false)
 
-clone_branch_directly(false)
+clone_branch_directly(true)
 git_branch("main")
 
 # For all available options run `fastlane match --help`
