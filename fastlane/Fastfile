@@ -18,7 +18,7 @@ platform :ios do
       keychain_password: keychain_password
     )
     
-  increment_build_number(xcodeproj: "GitHubCICD.xcodeproj")
+    increment_build_number(xcodeproj: "GitHubCICD.xcodeproj")
     sync_code_signing(
       type: "appstore",
       app_identifier: 'com.CICD',
