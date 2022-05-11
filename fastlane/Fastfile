@@ -1,9 +1,4 @@
-opt_out_usage
 
-desc "Create App"
-lane :create_app do
-    create_app_online
-end
 
 default_platform(:ios)
 
