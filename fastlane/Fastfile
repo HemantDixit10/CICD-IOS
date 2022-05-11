@@ -8,7 +8,6 @@ platform :ios do
   
     keychain_name = "login"
     keychain_password = "tristate123"
-    ensure_temp_keychain(keychain_name, keychain_password)
     
     match(
       type: 'appstore',
