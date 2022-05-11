@@ -11,7 +11,6 @@ platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
 
-  match(git_branch: "main", username: "HemantDixit10")
   sync_code_signing
   enable_automatic_code_signing(path: "GitHubCICD.xcodeproj")
   increment_build_number(xcodeproj: "GitHubCICD.xcodeproj")
