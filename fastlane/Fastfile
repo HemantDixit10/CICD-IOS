@@ -6,6 +6,8 @@ platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
   
+    increment_build_number(xcodeproj: "GitHubCICD.xcodeproj")
+      
     keychain_name = "login"
     keychain_password = "tristate123"
     
@@ -18,7 +20,7 @@ platform :ios do
       keychain_password: keychain_password
     )
     
-    increment_build_number(xcodeproj: "GitHubCICD.xcodeproj")
+    
     sync_code_signing(
       type: "appstore",
       app_identifier: 'com.CICD',
