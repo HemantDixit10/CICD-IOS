@@ -6,24 +6,15 @@ platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
   
-    increment_build_number(xcodeproj: "GitHubCICD.xcodeproj")
+  setup_ci if ENV['CI']
+    match(type: 'appstore')
+        increment_build_number(xcodeproj: "GitHubCICD.xcodeproj")
+    build_app
+    upload_to_testflight(skip_waiting_for_build_processing: true)
     
-    match(
-    type: "appstore",
-    readonly: is_ci
-  )
-  
-    sync_code_signing()
-
-    build_app(scheme: "GitHubCICD")
-    app_store_connect_api_key(
-      is_key_content_base64: true,
-      in_house: false, # if it is enterprise or not
-    )
     
-  enable_automatic_code_signing(path: "GitHubCICD.xcodeproj")
-  
-  upload_to_testflight
+    
+    
     
   end
 end
