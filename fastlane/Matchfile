@@ -1,6 +1,7 @@
 git_url("git@github.com:HemantDixit10/CICD-IOS.git")
 storage_mode("git")
 git_branch("main")
+clone_branch_directly(true)
 type("development") # The default type, can be: appstore, adhoc, enterprise or development
 app_identifier(["com.CICD"])
 username("tristateAkshay") # Your Apple Developer Portal username
