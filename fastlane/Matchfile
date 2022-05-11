@@ -1,4 +1,4 @@
-git_url("git@github.com:HemantDixit10/CICD-IOS.git")
+git_url("git@github.com:tristateAkshay/CICD-IOS.git")
 storage_mode("git")
 git_branch("main")
 clone_branch_directly(true)
