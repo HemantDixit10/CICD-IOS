@@ -1,4 +1,4 @@
-git_url("https://github.com/HemantDixit10/CICD-IOS.git")
+git_url("git clone https://github.com/HemantDixit10/CICD-IOS.git /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/d20220511-5444-w9mkkd")
 
 storage_mode("git")
 
