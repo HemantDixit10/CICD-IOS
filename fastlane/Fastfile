@@ -7,20 +7,7 @@ platform :ios do
   lane :beta do
   
     increment_build_number(xcodeproj: "GitHubCICD.xcodeproj")
-      
-    keychain_name = "login"
-    keychain_password = "tristate123"
-    
-    match(
-      type: 'appstore',
-      app_identifier: "com.CICD",
-      git_basic_authorization: Base64.strict_encode64(ENV["tristateAkshay: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"]),
-      readonly: true,
-      keychain_name: keychain_name,
-      keychain_password: keychain_password
-    )
-    
-    
+          
     sync_code_signing(
       type: "appstore",
       app_identifier: 'com.CICD',
