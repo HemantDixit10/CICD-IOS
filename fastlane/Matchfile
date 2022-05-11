@@ -1,5 +1,4 @@
 git_url("git@github.com:HemantDixit10/CICD-IOS.git"")
-git_branch("main")
 
 
 type("appstore") # The default type, can be: appstore, adhoc, enterprise or development
