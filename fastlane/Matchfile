@@ -1,4 +1,3 @@
-clone_branch_directly(true)
 git_url("git@github.com:HemantDixit10/CICD-IOS.git"")
 
 storage_mode("git")
@@ -7,6 +6,7 @@ type("appstore") # The default type, can be: appstore, adhoc, enterprise or deve
 
 
 app_identifier(["com.CICD", "tools.fastlane.app2"])
+clone_branch_directly(true)
 username("HemantDixit10") # Your Apple Developer Portal username
 shallow_clone(false)
 force_for_new_devices(false)
