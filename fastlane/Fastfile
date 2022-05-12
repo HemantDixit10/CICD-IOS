@@ -18,9 +18,10 @@ before_all do
         profile: "./Certificate/CICD_Dis.mobileprovision", # optional if you use sigh
         build_configuration: "Release",
         code_signing_identity: "iPhone Distribution" # optionally specify the codesigning identity
+        SPACESHIP_SKIP_2FA_UPGRADE=1
     )
 
-        get_certificates
+        get_certificates(FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: $secreat.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD)
   
       sync_code_signing(type: "appstore")
       
