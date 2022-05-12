@@ -42,6 +42,9 @@ jobs:
       
     - name: Match Repo Clone Test
       run: git clone git@github.com:tristateAkshay/CICD-IOS.git
+      with:
+        ssh-agent -s
+        ssh-add ~/.ssh/id_rsa
           
     - name: Build & Distribute to Testflight
       run:
