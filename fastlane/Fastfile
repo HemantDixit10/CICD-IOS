@@ -7,9 +7,15 @@ platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
   
-  clear_derived_data
-  get_certificates
-  get_provisioning_profile
+    match(
+      type: 'appstore',
+      app_identifier: "com.CICD",
+      git_basic_authorization: Base64.strict_encode64(ENV["ANKIT2364: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"]),
+    )
+    clear_derived_data
+    sync_code_signing(type: "appstore")
+    get_certificates
+    get_provisioning_profile
   
     setup_ci
     increment_build_number(xcodeproj: "GitHubCICD.xcodeproj")
