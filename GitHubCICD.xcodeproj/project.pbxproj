@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CD00F4D3282A8BEC0015A227 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = CD00F4D2282A8BEC0015A227 /* Gemfile */; };
+		CD5E5A8A282CCA6300693A31 /* Matchfile in Resources */ = {isa = PBXBuildFile; fileRef = CD5E5A89282CCA6300693A31 /* Matchfile */; };
 		CDD58429282BF2AA0099960C /* CICD_Dis (1).mobileprovision in Resources */ = {isa = PBXBuildFile; fileRef = CDD58427282BF2AA0099960C /* CICD_Dis (1).mobileprovision */; };
 		CDD5842A282BF2AA0099960C /* CICD.p12 in Resources */ = {isa = PBXBuildFile; fileRef = CDD58428282BF2AA0099960C /* CICD.p12 */; };
 		CDD86BC82824F13E003FAB1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD86BB92824F13D003FAB1F /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		CD00F4D2282A8BEC0015A227 /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		CD5E5A89282CCA6300693A31 /* Matchfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Matchfile; sourceTree = "<group>"; };
 		CDD58427282BF2AA0099960C /* CICD_Dis (1).mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CICD_Dis (1).mobileprovision"; sourceTree = "<group>"; };
 		CDD58428282BF2AA0099960C /* CICD.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = CICD.p12; sourceTree = "<group>"; };
 		CDD86BB92824F13D003FAB1F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				CDDC6DD5282A47A100A174B0 /* Gymfile */,
 				CDDC6DCB282A284600A174B0 /* Appfile */,
 				CDDC6DCC282A284600A174B0 /* Fastfile */,
+				CD5E5A89282CCA6300693A31 /* Matchfile */,
 			);
 			path = fastlane;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				CDD86BCB2824F13E003FAB1F /* Main.storyboard in Resources */,
 				CDD86BCA2824F13E003FAB1F /* LaunchScreen.storyboard in Resources */,
 				CDD86BC92824F13E003FAB1F /* Assets.xcassets in Resources */,
+				CD5E5A8A282CCA6300693A31 /* Matchfile in Resources */,
 				CDD5842A282BF2AA0099960C /* CICD.p12 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
