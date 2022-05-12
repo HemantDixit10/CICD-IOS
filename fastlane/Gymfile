@@ -22,3 +22,5 @@ include_bitcode(false)
 include_symbols(false)
 #5
 export_xcargs("-allowProvisioningUpdates")
+
+export_method("adhoc")
