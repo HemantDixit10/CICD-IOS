@@ -19,7 +19,7 @@ jobs:
         xcode-version: latest-stable
       
     - name: Install SSH key
-      uses: shimataro/ssh-key-action@v2
+      uses: ssh-add ~/.ssh/id_rsa
       with:
         key: ${{ secrets.SSH_KEY }}
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
@@ -41,8 +41,6 @@ jobs:
       run: sudo gem install fastlane
       
     - name: Match Repo Clone Test
-      uses: ssh-agent -s
-          ssh-add ~/.ssh/id_rsa
       run: git clone git@github.com:tristateAkshay/CICD-IOS.git
       
           
