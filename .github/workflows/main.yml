@@ -40,14 +40,9 @@ jobs:
     - name: Setup fastlane
       run: sudo gem install fastlane
       
-#    - name: Setup bundle
-#      uses: install bundle
-    - name: Match Repo Clone Test (please delete this)
+    - name: Match Repo Clone Test
         run: |
-          eval "$(ssh-agent -s)"
-          ssh-add - <<< "${MATCH_DEPLOY_KEY}"
           git clone git@github.com:tristateAkshay/CICD-IOS.git
-          ls match-repo-for-fastlane-plugin-github_action
         
           
     - name: Build & Distribute to Testflight
@@ -59,8 +54,6 @@ jobs:
         FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
         FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
         FASTLANE_SESSION: ${{ secrets.FASTLANE_SESSION }}
-        GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=no"
-        MATCH_READONLY: true
 
 
 
