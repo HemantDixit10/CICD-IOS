@@ -42,7 +42,9 @@ jobs:
       
     - name: Match Repo Clone Test
       run:  git clone https://github.com/tristateAkshay/CICD-IOS.git
-      
+      env:
+        GITHUB_USERNAME: ${{ secrets.GITHUB_USERNAME }}
+        GITHUB_PASSWORD: ${{ secrets.GITHUB_PASSWORD }}
           
     - name: Build & Distribute to Testflight
       run:
