@@ -23,14 +23,7 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
 
     opt_out_usage
 
-  match(
-    type: 'appstore',
-    git_basic_authorization: Base64.strict_encode64("ANKIT2364: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"),
-    readonly: true,
-    keychain_name: "login.keychain",
-    keychain_password: "tristate123",
-    app_identifier: ["com.CICD"],
-  )
+  
 
     get_certificates
     get_provisioning_profile
