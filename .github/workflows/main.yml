@@ -29,13 +29,6 @@ jobs:
       with:
         ruby-version: 3.0.0
         bundler-cache: false
-        
-    - name: Publish to GPR
-      run: |
-        mkdir -p $HOME/.gem
-        touch $HOME/.gem/credentials
-        chmod 0600 $HOME/.gem/credentials
-        printf -- "---\n:github: ${GEM_HOST_API_KEY}\n" > $HOME/.gem/credentials
 
     - name: Setup fastlane
       run: sudo gem install fastlane
