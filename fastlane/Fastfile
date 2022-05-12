@@ -3,15 +3,14 @@
 default_platform(:ios)
 
 platform :ios do
-    ENV["FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD"] = "khmg-guab-dguk-gpts"
+before_all do
+    ENV["FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD"] = "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"
+  end
+  
   desc "Push a new beta build to TestFlight"
   lane :beta do
   
-    match(
-      type: 'appstore',
-      app_identifier: "com.CICD",
-      git_basic_authorization: Base64.strict_encode64(ENV["ANKIT2364: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"]),
-    )
+   
     clear_derived_data
     sync_code_signing(type: "appstore")
     get_certificates
