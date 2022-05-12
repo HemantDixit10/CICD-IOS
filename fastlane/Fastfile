@@ -12,16 +12,16 @@ before_all do
   
    
     clear_derived_data
-    
-    update_project_provisioning(
-        xcodeproj: "GitHubCICD.xcodeproj",
-        profile: "./Certificate/CICD_Dis.mobileprovision", # optional if you use sigh
-        build_configuration: "Release",
-        code_signing_identity: "iPhone Distribution" # optionally specify the codesigning identity
-        SPACESHIP_SKIP_2FA_UPGRADE=1
-    )
+    app_store_connect_api_key()
 
-        get_certificates(FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: $secreat.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD)
+  match(
+    type: 'appstore',
+    app_identifier: ["com.CICD"],
+    readonly: true
+  )
+
+    get_certificates
+    get_provisioning_profile
   
       sync_code_signing(type: "appstore")
       
