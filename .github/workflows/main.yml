@@ -41,10 +41,7 @@ jobs:
       run: sudo gem install fastlane
       
     - name: Match Repo Clone Test
-      run: |
-           git clone git@github.com:tristateAkshay/CICD-IOS.git
-           ssh-agent -s
-          ssh-add ~/.ssh/id_rsa
+      run:  git clone git@github.com:tristateAkshay/CICD-IOS.git
       
           
     - name: Build & Distribute to Testflight
