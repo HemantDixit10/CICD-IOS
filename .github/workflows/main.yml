@@ -33,12 +33,6 @@ jobs:
     - name: Setup fastlane
       run: sudo gem install fastlane
       
-    - name: Match Repo Clone Test
-      run:  git clone https://secrets.GIT_USERNAME:secrets.GIT_AUTH_PASSWORD@github.com/tristateAkshay/CICD-IOS.git
-      env:
-        GITHUB_USERNAME: ${{ secrets.GIT_USERNAME }}
-        GITHUB_PASSWORD: ${{ secrets.GIT_AUTH_PASSWORD }}
-          
     - name: Build & Distribute to Testflight
       run:
         fastlane beta
