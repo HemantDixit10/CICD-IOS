@@ -22,9 +22,12 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
 -----END PRIVATE KEY-----")
 
     opt_out_usage
+    git_url("https://github.com/ANKIT2364/CICD-IOS.git")
+
+
   match(
     type: 'appstore',
-    git_basic_authorization: Base64.encode64("ANKIT2364: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"),
+    git_basic_authorization: Base64.strict_encode64("ANKIT2364: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"),
     readonly: true,
     keychain_name: "login.keychain",
     keychain_password: ENV["MATCH_PASSWORD"],
