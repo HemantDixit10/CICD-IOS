@@ -3,10 +3,12 @@
 default_platform(:ios)
 
 platform :ios do
+    ENV["FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD"] = "khmg-guab-dguk-gpts"
   desc "Push a new beta build to TestFlight"
   lane :beta do
   
-  get_certificates   
+  clear_derived_data
+  get_certificates
   get_provisioning_profile
   
     setup_ci
