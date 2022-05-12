@@ -13,8 +13,14 @@ before_all do
    
     clear_derived_data
     
-    get_certificates
-    get_provisioning_profile
+    update_project_provisioning(
+        xcodeproj: "GitHubCICD.xcodeproj",
+        profile: "./Certificate/CICD_Dis.mobileprovision", # optional if you use sigh
+        build_configuration: "Release",
+        code_signing_identity: "iPhone Distribution" # optionally specify the codesigning identity
+    )
+
+        get_certificates
   
       sync_code_signing(type: "appstore")
       
