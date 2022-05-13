@@ -2,6 +2,7 @@ git_url("git@github.com:ANKIT2364/CICD-IOS.git")
 clone_branch_directly(true)
 storage_mode("git")
 git_branch("main")
+skip_certificate_matching(true)
 type("appstore") # The default type, can be: appstore, adhoc, enterprise or development
 app_identifier(["com.CICD"])
 username("ANKIT2364") # Your Apple Developer Portal username
