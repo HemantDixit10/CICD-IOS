@@ -24,21 +24,24 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
     opt_out_usage
 
   
-    setup_ci
-    increment_build_number(xcodeproj: "GitHubCICD.xcodeproj")
-    build_app
-        gym(
+   
+    gym(
         scheme: "GitHubCICD",
         output_directory: ".",
         archive_path:".",
         configuration: "Release",
         export_method: "app-store",
+        export_options: {
+          provisioningProfiles: {
+            "com.CICD" => "match AppStore_com.CICD.mobileprovision"
+          }
+        }
       )
-    upload_to_testflight(skip_waiting_for_build_processing: true)
-    
-    
       
-    
+    setup_ci
+    increment_build_number(xcodeproj: "GitHubCICD.xcodeproj")
+    build_app
+    upload_to_testflight(skip_waiting_for_build_processing: true)
     
   end
 end
