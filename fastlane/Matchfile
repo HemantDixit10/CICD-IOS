@@ -1,4 +1,5 @@
-git_url("git@github.com:ANKIT2364/CICD-IOS.git")
+
+clone_branch_directly(true)
 storage_mode("git")
 git_branch("main")
 type("appstore") # The default type, can be: appstore, adhoc, enterprise or development
