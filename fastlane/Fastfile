@@ -23,9 +23,7 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
 
     opt_out_usage
   
-  sigh(force: true)
   
-  get_provisioning_profile   # invokes sigh
   build_app
     
     upload_to_testflight(skip_waiting_for_build_processing: true)
