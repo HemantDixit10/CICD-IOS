@@ -23,6 +23,9 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
 
     opt_out_usage
   
+  cert
+  sigh(force: true)
+  
   get_provisioning_profile   # invokes sigh
   build_app
     
