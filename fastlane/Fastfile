@@ -49,7 +49,7 @@ platform :ios do
     
     increment_build_number(xcodeproj: "GitHubCICD.xcodeproj")
     
-    xcode_select("/Applications/Xcode_12.5.1.app")
+    xcode_select("/Applications/Xcode.app")
     gym(
       configuration: "Release",
       project: "GitHubCICD.xcodeproj",

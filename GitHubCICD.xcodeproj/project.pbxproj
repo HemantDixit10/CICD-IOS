@@ -79,9 +79,9 @@
 		CDDC6DCA282A284600A174B0 /* fastlane */ = {
 			isa = PBXGroup;
 			children = (
-				CDDC6DD5282A47A100A174B0 /* Gymfile */,
 				CDDC6DCB282A284600A174B0 /* Appfile */,
 				CDDC6DCC282A284600A174B0 /* Fastfile */,
+				CDDC6DD5282A47A100A174B0 /* Gymfile */,
 				CD5E5A89282CCA6300693A31 /* Matchfile */,
 			);
 			path = fastlane;
