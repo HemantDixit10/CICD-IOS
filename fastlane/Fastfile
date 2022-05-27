@@ -13,7 +13,7 @@ before_all do
    
     clear_derived_data
     app_store_connect_api_key(key_id: "JX9V5MKAZ8",
-    issuer_id: "CI/CD_KEY",
+    issuer_id: "69a6de7b-64f7-47e3-e053-5b8c7c11a4d1",
     key_content: "-----BEGIN PRIVATE KEY-----
 MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgqY+zMlaE2wxUF52V
 sVjXSHAJCTBazoVfb6XYH7/cztWgCgYIKoZIzj0DAQehRANCAAR92PmRoyK13ll/
