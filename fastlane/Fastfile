@@ -52,7 +52,7 @@ platform :ios do
 
     gym(
       configuration: "Release",
-      xcodeproj: "GitHubCICD.xcodeproj",
+      project: "GitHubCICD.xcodeproj",
       scheme: "GitHubCICD",
       export_method: "app-store",
       export_options: {
