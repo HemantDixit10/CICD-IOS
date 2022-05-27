@@ -35,22 +35,7 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
     increment_build_number(xcodeproj: "GitHubCICD.xcodeproj")
     
 
-    build_app(
-      workspace: "GitHubCICD.xcworkspace",
-      scheme: "GitHubCICD",
-      export_xcargs: "-allowProvisioningUpdates",
-      clean: true,
-      xcargs: "DEVELOPMENT_TEAM='#{ENV["327TPG23FM"]}'",
-      export_team_id: ENV["327TPG23FM"],
-      output_directory: "deploy",
-      output_name: "#{ENV["FILE_IPA"]}-#{GitHubCICD}.ipa",
-      export_method: "app-store",
-      export_options: {
-        provisioningProfiles: {
-          "#{ENV["APPLICATION_ID"]}" => "match AppStore com.CICD",
-        }
-      }
-    )
+    build_app
     
     upload_to_testflight(skip_waiting_for_build_processing: true)
     
