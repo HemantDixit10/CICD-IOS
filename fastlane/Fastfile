@@ -50,6 +50,10 @@ platform :ios do
     increment_build_number(xcodeproj: "GitHubCICD.xcodeproj")
     
     xcode_select("/Applications/Xcode.app")
+    
+    get_certificates
+    get_provisioning_profile
+  
     gym(
       configuration: "Release",
       project: "GitHubCICD.xcodeproj",
