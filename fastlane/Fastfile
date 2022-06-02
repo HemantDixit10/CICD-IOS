@@ -36,14 +36,14 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
     xcode_select("/Applications/Xcode.app")
     
    
-    disable_automatic_code_signing(path: "GitHubCICD.xcodeproj",
+    update_code_signing_settings(path: "GitHubCICD.xcodeproj",
           team_id: "327TPG23FM"
         )
 
 update_project_provisioning(
           xcodeproj: "GitHubCICD.xcodeproj",
           target_filter: "GitHubCICD",
-          profile:"/Users/Saroj/GitLab/CICD/AppStore_com.CICD.mobileprovision",
+          profile:"./AppStore_com.CICD.mobileprovision",
           build_configuration: "Release"
         )
         
