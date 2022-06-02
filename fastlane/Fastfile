@@ -36,7 +36,8 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
     xcode_select("/Applications/Xcode.app")
     
    
-  
+    install_provisioning_profile(path: "/Users/Saroj/GitLab/CICD/AppStore_com.CICD.mobileprovision")
+
     gym(
       configuration: "Release",
       project: "GitHubCICD.xcodeproj",
