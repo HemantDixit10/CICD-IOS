@@ -54,7 +54,7 @@ update_project_provisioning(
       export_method: "app-store",
       export_options: {
         provisioningProfiles: {
-            "327TPG23FM" => "AppStore_com.CICD.mobileprovision"
+            "com.CICD" => "./AppStore_com.CICD.mobileprovision"
         }
       }
     )
