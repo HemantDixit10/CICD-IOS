@@ -52,7 +52,18 @@ platform :ios do
     xcode_select("/Applications/Xcode.app")
     
   
-    
+    gym(
+      configuration: "Release",
+      project: "GitHubCICD.xcodeproj",
+      scheme: "GitHubCICD",
+      export_method: "app-store",
+      export_options: {
+        provisioningProfiles: {
+            DEVELOPER_APP_ID => PROVISIONING_PROFILE_SPECIFIER
+        }
+      }
+    )
+
     pilot(
       apple_id: "#{DEVELOPER_APP_ID}",
       app_identifier: "#{DEVELOPER_APP_IDENTIFIER}",
@@ -60,7 +71,7 @@ platform :ios do
       skip_submission: true,
       distribute_external: false,
       notify_external_testers: false,
-      ipa: "./your_app_name.ipa"
+      ipa: "./GitHubCICD.ipa"
     )
 
     delete_temp_keychain(keychain_name)
