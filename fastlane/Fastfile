@@ -51,7 +51,6 @@ platform :ios do
     
     xcode_select("/Applications/Xcode.app")
     
-    get_provisioning_profile
   
     gym(
       configuration: "Release",
