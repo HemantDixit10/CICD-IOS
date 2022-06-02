@@ -50,8 +50,10 @@ platform :ios do
     increment_build_number(xcodeproj: "GitHubCICD.xcodeproj")
     
     xcode_select("/Applications/Xcode.app")
-    cert
-    sigh(force: true)
+    get_certificates(
+  development: true,
+  username: "tristate.mteam@email.com"
+)
   
     gym(
       configuration: "Release",
