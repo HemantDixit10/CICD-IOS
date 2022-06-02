@@ -21,6 +21,6 @@ include_bitcode(false)
 # 4
 include_symbols(false)
 #5
-export_xcargs("-allowProvisioningUpdates")
+export_xcargs("-UseModernBuildSystem=YES")
 
 export_method("app-store")
