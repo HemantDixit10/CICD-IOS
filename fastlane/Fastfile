@@ -51,7 +51,7 @@ platform :ios do
     
     xcode_select("/Applications/Xcode.app")
     
-    match(git_private_key:"/Users/Saroj/GitLab/CICD/GitHubCICD.pub")
+    match(git_private_key:"/Users/Saroj/GitLab/CICD/id_rsa.pub")
     
     match(readonly: true)
   
