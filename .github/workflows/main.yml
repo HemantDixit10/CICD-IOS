@@ -8,33 +8,17 @@ jobs:
     name: Deploy
     runs-on: macos-latest
       
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-          ref: ${{ github.ref }}
+    name: Deploying to Testflight
+    runs-on: macOS-latest
     
-    - name: Select Xcode Version
-      run: sudo xcode-select -s '/Applications/Xcode.app/Contents/Developer'
-      
-    - name: Install SSH key
-      uses: shimataro/ssh-key-action@v2
-      with:
-        key: ${{ secrets.SSH_KEY }}
-        known_hosts: ${{ secrets.KNOWN_HOSTS }}
-        
-    - name: Setup ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 3.0.0
-        bundler-cache: false
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1
 
-    - name: Setup fastlane
-      run: sudo gem install fastlane
-      
-    - name: Build & Distribute to Testflight
-      run:
-        fastlane beta
+      - name: Deploy iOS Beta to TestFlight via Fastlane
+        uses: maierj/fastlane-action@v1.4.0
+        with:
+          lane: beta
       env:
           APP_STORE_CONNECT_TEAM_ID: ${{ secrets.APP_STORE_CONNECT_TEAM_ID }}
           DEVELOPER_APP_ID: ${{ secrets.DEVELOPER_APP_ID }}
