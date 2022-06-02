@@ -51,7 +51,7 @@ platform :ios do
     
     xcode_select("/Applications/Xcode.app")
     
-    match(type: "appstore", readonly: is_ci)
+    match(readonly: true)
   
     gym(
       configuration: "Release",
