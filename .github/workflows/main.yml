@@ -7,9 +7,6 @@ jobs:
   deploy:
     name: Deploy
     runs-on: macos-latest
-      
-    name: Deploying to Testflight
-    runs-on: macOS-latest
     
     steps:
       - name: Checkout repository
