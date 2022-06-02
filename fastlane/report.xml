@@ -5,7 +5,27 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000573">
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000592">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: app_store_connect_api_key" time="0.00393">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: increment_build_number" time="2.367045">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: xcode_select" time="0.001484">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="4: gym" time="36.657338">
         
       </testcase>
     
