@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  GitHubCICD
+//  CICD
 //
-//  Created by Tristate on 03.05.22.
+//  Created by Tristate on 02.06.22.
 //
 
 import UIKit
