@@ -19,7 +19,7 @@
 	<key>provisioningProfiles</key>
 	<dict>
 		<key>com.CICD</key>
-		<string>match Appstore com.CICD</string>
+		<string>Appstore_com.CICD</string>
 	</dict>
 </dict>
 </plist>
