@@ -4,7 +4,7 @@
 <dict>
 	<key>compileBitcode</key>
 	<true/>
-	<key>export_method</key>
+	<key>method</key>
 	<string>app-store</string>
 	<key>teamID</key>
 	<string>327TPG23FM</string>
