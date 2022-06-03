@@ -43,7 +43,7 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
     update_project_provisioning(
           xcodeproj: "GitHubCICD.xcodeproj",
           target_filter: "GitHubCICD",
-          profile:"./AppStore_com.CICD.mobileprovision",
+          profile:"./Certificate/CICD_Dis.mobileprovision",
           build_configuration: "Release",
           certificate: "./AppleIncRootCertificate.cer"
         )
@@ -58,7 +58,7 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
           export_options: {
             method: "app-store",
             provisioningProfiles: {
-              "com.CICD" => "AppStore_com.CICD"
+              "com.CICD" => "CICD_Dis"
             }
           },
           codesigning_identity:"Apple Distribution: Tristate Technology(327TPG23FM)",
