@@ -20,7 +20,7 @@
 	<string>Apple Distribution: Tristate Technology (327TPG23FM)</string>
 	<key>provisioningProfiles</key>
 	<dict>
-		<key>com.CICD</key>
+		<key>327TPG23FM.com.CICD</key>
 		<string>AppStore_com.CICD</string>
 	</dict>
 </dict>
