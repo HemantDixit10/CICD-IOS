@@ -51,16 +51,7 @@ update_project_provisioning(
         
    
 
-    pilot(
-      apple_id: "327TPG23FM",
-      app_identifier: "com.CICD",
-      skip_waiting_for_build_processing: true,
-      skip_submission: true,
-      distribute_external: false,
-      notify_external_testers: false,
-      ipa: "./GitHubCICD.ipa"
-    )
-
+ 
     
     clear_derived_data
       
