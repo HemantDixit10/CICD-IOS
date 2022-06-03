@@ -4,9 +4,7 @@
 <dict>
 	<key>compileBitcode</key>
 	<true/>
-	<key>iCloudContainerEnvironment</key>
-	<string>Production</string>
-	<key>method</key>
+	<key>export_method</key>
 	<string>app-store</string>
 	<key>teamID</key>
 	<string>327TPG23FM</string>
