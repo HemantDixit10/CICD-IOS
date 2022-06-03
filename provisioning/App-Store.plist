@@ -21,7 +21,7 @@
 	<key>provisioningProfiles</key>
 	<dict>
 		<key>com.CICD</key>
-		<string>4faef181-a03c-4c1e-820b-3ef4eb274fbf</string>
+		<string>AppStore_com.CICD</string>
 	</dict>
 </dict>
 </plist>
