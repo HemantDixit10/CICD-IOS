@@ -45,7 +45,13 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
           build_configuration: "Release",
           certificate: "./AppleIncRootCertificate.cer"
         )
-    xcodebuild
+    xcodebuild(
+        archive: true,
+        archive_path: ".",
+        scheme: "GitHubCICD",
+        project: "GitHubCICD.xcodeproj"
+    )
+    
      gym(
           project: "GitHubCICD.xcodeproj",
           scheme:"GitHubCICD",
