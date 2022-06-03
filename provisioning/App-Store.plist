@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>compileBitcode</key>
+	<true/>
+	<key>iCloudContainerEnvironment</key>
+	<string>Production</string>
+	<key>method</key>
+	<string>app-store</string>
+	<key>teamID</key>
+	<string>327TPG23FM</string>
+	<key>uploadBitcode</key>
+	<true/>
+	<key>uploadSymbols</key>
+	<true/>
+	<key>signingStyle</key>
+	<string>manual</string>
+	<key>signingCertificate</key>
+	<string>Apple Distribution: Tristate Technology</string>
+	<key>provisioningProfiles</key>
+	<dict>
+		<key>match Appstore com.CICD</key>
+		<string>4faef181-a03c-4c1e-820b-3ef4eb274fbf</string>
+	</dict>
+</dict>
+</plist>
