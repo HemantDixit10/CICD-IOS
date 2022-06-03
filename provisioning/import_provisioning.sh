@@ -2,7 +2,7 @@
 
 # Decrypt the files
 # --batch to prevent interactive command --yes to assume "yes" for questions
-gpg --quiet --batch --yes --decrypt --passphrase="$PROVISIONING_PASSWORD" --output provisioning/CICD.p12 provisioning/CICD.p12.gpg
+gpg --quiet --batch --yes --decrypt --passphrase="$PROVISIONING_PASSWORD" --output provisioning/AppStoreCICD.p12 provisioning/AppStoreCICD.p12.gpg
 gpg --quiet --batch --yes --decrypt --passphrase="$PROVISIONING_PASSWORD" --output provisioning/AppStore_com.CICD.mobileprovision provisioning/AppStore_com.CICD.mobileprovision.gpg
 
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
