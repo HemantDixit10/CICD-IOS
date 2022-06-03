@@ -40,18 +40,42 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
           team_id: "327TPG23FM"
         )
 
-update_project_provisioning(
+    update_project_provisioning(
           xcodeproj: "GitHubCICD.xcodeproj",
           target_filter: "GitHubCICD",
           profile:"./AppStore_com.CICD.mobileprovision",
           build_configuration: "Release"
         )
-     
-     
+
+     gym(
+          project: "GitHubCICD.xcodeproj",
+          scheme:"GitHubCICD",
+          configuration: "Release",
+          clean: true,
+          export_method: "app-store",
+          output_directory:"./build/",
+          export_options: {
+            method: "app-store",
+            provisioningProfiles: {
+              "com.CICD" => ENV["AppStore_com.CICD"]
+            }
+          },
+          codesigning_identity:"Apple Distribution: Tristate Technology(327TPG23FM)",
+          output_name: "GitHubCICD.ipa"
+        )
         
    
 
- 
+    pilot(
+      apple_id: "327TPG23FM",
+      app_identifier: "com.CICD",
+      skip_waiting_for_build_processing: true,
+      skip_submission: true,
+      distribute_external: false,
+      notify_external_testers: false,
+      ipa: "./GitHubCICD.ipa"
+    )
+
     
     clear_derived_data
       
