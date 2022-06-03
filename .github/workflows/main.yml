@@ -50,7 +50,7 @@ jobs:
       run: ls -R
       
     - name: Deploy App to Apple
-      run: xcrun altool --upload-app --type ios --file DerivedData/ipa/GitHubCICD.ipa --username "tristate.mteam@gmail.com" --password "Tri12@3state" --verbose
+      run: xcrun altool --upload-app --type ios --file DerivedData/ipa/GitHubCICD.ipa --username "tristate.mteam@gmail.com" --password "khmg-guab-dguk-gpts" --verbose
 
     - name: Setup fastlane
       run: sudo gem install fastlane
