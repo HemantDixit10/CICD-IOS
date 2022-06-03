@@ -45,13 +45,7 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
           build_configuration: "Release",
           certificate: "./AppleIncRootCertificate.cer"
         )
-    xcodebuild(
-        archive: true,
-        archive_path: ".",
-        scheme: "GitHubCICD",
-        project: "GitHubCICD.xcodeproj"
-    )
-    
+   
      gym(
           project: "GitHubCICD.xcodeproj",
           scheme:"GitHubCICD",
@@ -59,12 +53,6 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
           clean: true,
           export_method: "app-store",
           output_directory:".",
-          export_options: {
-            method: "app-store",
-            provisioningProfiles: {
-              "com.CICD" => "match AppStore com.CICD"
-            }
-          },
           output_name: "GitHubCICD.ipa"
         )
         
