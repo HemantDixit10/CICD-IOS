@@ -2,20 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>compileBitcode</key>
-	<true/>
 	<key>method</key>
 	<string>app-store</string>
 	<key>teamID</key>
 	<string>327TPG23FM</string>
 	<key>uploadBitcode</key>
-	<true/>
+	<false/>
 	<key>uploadSymbols</key>
-	<true/>
+	<false/>
 	<key>signingStyle</key>
 	<string>manual</string>
-	<key>signingCertificate</key>
-	<string>Apple Distribution: Tristate Technology (327TPG23FM)</string>
 	<key>provisioningProfiles</key>
 	<dict>
 		<key>com.CICD</key>
