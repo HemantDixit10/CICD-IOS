@@ -43,7 +43,7 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
     update_project_provisioning(
           xcodeproj: "GitHubCICD.xcodeproj",
           target_filter: "GitHubCICD",
-          profile:"./Certificate/CICD_Dis.mobileprovision",
+          profile:"./AppStore_com.CICD.mobileprovision",
           build_configuration: "Release",
           certificate: "./AppleIncRootCertificate.cer"
         )
@@ -54,14 +54,13 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
           configuration: "Release",
           clean: true,
           export_method: "app-store",
-          output_directory:"./build/",
+          output_directory:".",
           export_options: {
             method: "app-store",
             provisioningProfiles: {
-              "com.CICD" => ENV["sigh_com.CICD_Dis"]
+              "com.CICD" => "match AppStore com.CICD"
             }
           },
-          codesigning_identity:"Apple Distribution: Tristate Technology(327TPG23FM)",
           output_name: "GitHubCICD.ipa"
         )
         
@@ -71,18 +70,8 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
       apple_id: "327TPG23FM",
       app_identifier: "com.CICD",
       skip_waiting_for_build_processing: true,
-      skip_submission: true,
-      distribute_external: false,
-      notify_external_testers: false,
       ipa: "./GitHubCICD.ipa"
     )
-
-    
-    clear_derived_data
-      
-    build_app
-    
-    upload_to_testflight(skip_waiting_for_build_processing: true)
     
   end
 end
