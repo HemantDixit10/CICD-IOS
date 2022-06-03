@@ -47,21 +47,7 @@ update_project_provisioning(
           build_configuration: "Release"
         )
      
-     gym(
-                project: "GitHubCICD.xcodeproj",
-          scheme:"GitHubCICD",
-          configuration: "Release",
-          clean: true,
-          export_method: "app-store",
-          output_directory:"./build/",
-          export_options: {
-            method: "app-store",
-            provisioningProfiles: {
-              "com.CICD" => ENV["AppStore_com.CICD"]
-            }
-          },
-          output_name: "GitHubCICD.ipa"
-        )
+     
         
    
 
