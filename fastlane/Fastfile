@@ -58,17 +58,18 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
             method: "app-store",
             signingStyle: "manual",
             provisioningProfiles: {
-              "327TPG23FM.com.CICD" => "match AppStore com.CICD"
+              "com.CICD" => "match AppStore com.CICD"
             }
           },
           output_name: "GitHubCICD.ipa"
+          UseModernBuildSystem: true
         )
         
    
 
     pilot(
       apple_id: "327TPG23FM",
-      app_identifier: "327TPG23FM.com.CICD",
+      app_identifier: "com.CICD",
       skip_waiting_for_build_processing: true,
       ipa: "./GitHubCICD.ipa"
     )
