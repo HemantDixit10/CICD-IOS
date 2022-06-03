@@ -43,7 +43,7 @@ jobs:
     - name: Build archive
       run: xcodebuild -sdk iphoneos -project GitHubCICD.xcodeproj -configuration Release -scheme GitHubCICD -derivedDataPath DerivedData -archivePath DerivedData/Archive/GitHubCICD archive
     - name: Export Archive
-      run: xcodebuild -exportArchive -archivePath DerivedData/Archive/GitHubCICD.xcarchive -exportOptionsPlist provisioning/App-Store.plist -exportPath DerivedData/ipa
+      run: xcodebuild -exportArchive -archivePath DerivedData/Archive/GitHubCICD.xcarchive -exportOptionsPlist ./provisioning/App-Store.plist -exportPath DerivedData/ipa
     - name: Dump file hierarchy
       run: ls -R
     - name: Deploy App to Apple
