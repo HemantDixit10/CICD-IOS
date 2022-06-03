@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CD00F4D3282A8BEC0015A227 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = CD00F4D2282A8BEC0015A227 /* Gemfile */; };
 		CD5E5A8A282CCA6300693A31 /* Matchfile in Resources */ = {isa = PBXBuildFile; fileRef = CD5E5A89282CCA6300693A31 /* Matchfile */; };
-		CDD5842A282BF2AA0099960C /* CICD.p12 in Resources */ = {isa = PBXBuildFile; fileRef = CDD58428282BF2AA0099960C /* CICD.p12 */; };
 		CDD86BC82824F13E003FAB1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD86BB92824F13D003FAB1F /* ViewController.swift */; };
 		CDD86BC92824F13E003FAB1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDD86BBA2824F13D003FAB1F /* Assets.xcassets */; };
 		CDD86BCA2824F13E003FAB1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD86BBB2824F13D003FAB1F /* LaunchScreen.storyboard */; };
@@ -25,9 +24,7 @@
 /* Begin PBXFileReference section */
 		CD00F4D2282A8BEC0015A227 /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		CD5E5A89282CCA6300693A31 /* Matchfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Matchfile; sourceTree = "<group>"; };
-		CD5E5A8B282D2CCE00693A31 /* CICD_Dis.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = CICD_Dis.mobileprovision; sourceTree = "<group>"; };
 		CD5E5A8C282D2CD900693A31 /* AppStore_com.CICD.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppStore_com.CICD.mobileprovision; sourceTree = "<group>"; };
-		CDD58428282BF2AA0099960C /* CICD.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = CICD.p12; sourceTree = "<group>"; };
 		CDD86BB92824F13D003FAB1F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CDD86BBA2824F13D003FAB1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDD86BBC2824F13D003FAB1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,15 +50,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CDD58426282BF2AA0099960C /* Certificate */ = {
-			isa = PBXGroup;
-			children = (
-				CD5E5A8B282D2CCE00693A31 /* CICD_Dis.mobileprovision */,
-				CDD58428282BF2AA0099960C /* CICD.p12 */,
-			);
-			path = Certificate;
-			sourceTree = "<group>";
-		};
 		CDD86BB82824F13D003FAB1F /* GitHubCICD */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				CD5E5A8C282D2CD900693A31 /* AppStore_com.CICD.mobileprovision */,
-				CDD58426282BF2AA0099960C /* Certificate */,
 				CD00F4D2282A8BEC0015A227 /* Gemfile */,
 				CDDC6DCA282A284600A174B0 /* fastlane */,
 				CDDC6DCF282A284600A174B0 /* Gemfile.lock */,
@@ -175,7 +162,6 @@
 				CDD86BCA2824F13E003FAB1F /* LaunchScreen.storyboard in Resources */,
 				CDD86BC92824F13E003FAB1F /* Assets.xcassets in Resources */,
 				CD5E5A8A282CCA6300693A31 /* Matchfile in Resources */,
-				CDD5842A282BF2AA0099960C /* CICD.p12 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

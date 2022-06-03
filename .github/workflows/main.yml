@@ -19,8 +19,7 @@ jobs:
     - name: List available Xcode versions
       run: ls /Applications | grep Xcode
       
-    - name: Select Xcode
-      run: sudo xcode-select -switch /Applications/Xcode.app && /usr/bin/xcodebuild -version
+    
       
     - name: Install SSH key
       uses: shimataro/ssh-key-action@v2
@@ -37,7 +36,10 @@ jobs:
       run: ./provisioning/import_provisioning.sh
       env:
         PROVISIONING_PASSWORD: ${{ secrets.PROVISIONING_PASSWORD }}
-        
+    
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode.app && /usr/bin/xcodebuild -version
+      
     - name: Build archive
       run: xcodebuild -sdk iphoneos -project GitHubCICD.xcodeproj -configuration Release -scheme GitHubCICD -derivedDataPath DerivedData -archivePath DerivedData/Archive/GitHubCICD archive
     - name: Export Archive
