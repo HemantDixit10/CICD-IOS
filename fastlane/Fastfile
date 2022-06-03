@@ -34,7 +34,7 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
         
    
     update_code_signing_settings(path: "GitHubCICD.xcodeproj",
-          team_id: 327TPG23FM
+          team_id: "327TPG23FM"
         )
 
     update_project_provisioning(
@@ -53,7 +53,7 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
           export_method: "app-store",
           output_directory:".",
           skip_profile_detection: true,
-          export_team_id:327TPG23FM,
+          export_team_id:"327TPG23FM",
           export_options: {
             method: "app-store",
             signingStyle: "manual",
