@@ -20,7 +20,7 @@
 	<string>Apple Distribution: Tristate Technology</string>
 	<key>provisioningProfiles</key>
 	<dict>
-		<key>match Appstore com.CICD</key>
+		<key>CICD.app.CICD</key>
 		<string>4faef181-a03c-4c1e-820b-3ef4eb274fbf</string>
 	</dict>
 </dict>
