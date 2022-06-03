@@ -102,7 +102,7 @@ GEM
       tty-screen (>= 0.6.3, < 1.0.0)
       tty-spinner (>= 0.8.0, < 1.0.0)
       word_wrap (~> 1.0.0)
-      xcodeproj (>= 1.13.0, < 2.0.0)
+      xcodeproj (1.21.0)
       xcpretty (~> 0.3.0)
       xcpretty-travis-formatter (>= 0.0.3)
     gh_inspector (1.1.3)
