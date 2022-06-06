@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CD00F4D3282A8BEC0015A227 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = CD00F4D2282A8BEC0015A227 /* Gemfile */; };
 		CD5E5A8A282CCA6300693A31 /* Matchfile in Resources */ = {isa = PBXBuildFile; fileRef = CD5E5A89282CCA6300693A31 /* Matchfile */; };
+		CD984AD0284DCF0400101F9D /* main.yml in Resources */ = {isa = PBXBuildFile; fileRef = CD984ACF284DCF0400101F9D /* main.yml */; };
 		CDD86BC82824F13E003FAB1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD86BB92824F13D003FAB1F /* ViewController.swift */; };
 		CDD86BC92824F13E003FAB1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDD86BBA2824F13D003FAB1F /* Assets.xcassets */; };
 		CDD86BCA2824F13E003FAB1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD86BBB2824F13D003FAB1F /* LaunchScreen.storyboard */; };
@@ -30,6 +31,7 @@
 		CD00F4D2282A8BEC0015A227 /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		CD5E5A89282CCA6300693A31 /* Matchfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Matchfile; sourceTree = "<group>"; };
 		CD5E5A8C282D2CD900693A31 /* AppStore_com.CICD.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppStore_com.CICD.mobileprovision; sourceTree = "<group>"; };
+		CD984ACF284DCF0400101F9D /* main.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = main.yml; sourceTree = "<group>"; };
 		CDD86BB92824F13D003FAB1F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CDD86BBA2824F13D003FAB1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDD86BBC2824F13D003FAB1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +62,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD984ACD284DCF0400101F9D /* .github */ = {
+			isa = PBXGroup;
+			children = (
+				CD984ACE284DCF0400101F9D /* workflows */,
+			);
+			path = .github;
+			sourceTree = "<group>";
+		};
+		CD984ACE284DCF0400101F9D /* workflows */ = {
+			isa = PBXGroup;
+			children = (
+				CD984ACF284DCF0400101F9D /* main.yml */,
+			);
+			path = workflows;
+			sourceTree = "<group>";
+		};
 		CDD86BB82824F13D003FAB1F /* GitHubCICD */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +118,7 @@
 		CDE56DB328212C8700734604 = {
 			isa = PBXGroup;
 			children = (
+				CD984ACD284DCF0400101F9D /* .github */,
 				CDDC7E0E284A2D4D001B68A2 /* provisioning */,
 				CD5E5A8C282D2CD900693A31 /* AppStore_com.CICD.mobileprovision */,
 				CD00F4D2282A8BEC0015A227 /* Gemfile */,
@@ -190,6 +209,7 @@
 				CDD86BC92824F13E003FAB1F /* Assets.xcassets in Resources */,
 				CDDC7E18284A2D4D001B68A2 /* import_provisioning.sh in Resources */,
 				CD5E5A8A282CCA6300693A31 /* Matchfile in Resources */,
+				CD984AD0284DCF0400101F9D /* main.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
