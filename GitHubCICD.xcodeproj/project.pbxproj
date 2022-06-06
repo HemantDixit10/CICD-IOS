@@ -374,7 +374,7 @@
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 327TPG23FM;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "CICD-Info.plist";
+				INFOPLIST_FILE = CICD/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = allow;
@@ -408,7 +408,7 @@
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 327TPG23FM;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "CICD-Info.plist";
+				INFOPLIST_FILE = CICD/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = allow;
