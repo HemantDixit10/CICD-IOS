@@ -44,6 +44,9 @@ jobs:
       run: sudo gem install fastlane
       
     - name: Increment Build Number
+      run: xcrun agvtool next-version -all
+    
+    - name: Upload Build
       run: fastlane beta
       
    
