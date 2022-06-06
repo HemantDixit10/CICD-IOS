@@ -86,7 +86,6 @@
 				CDD86BBB2824F13D003FAB1F /* LaunchScreen.storyboard */,
 				CDD86BBD2824F13D003FAB1F /* Main.storyboard */,
 				CDD86BBF2824F13D003FAB1F /* AppDelegate.swift */,
-				CDD86BC02824F13D003FAB1F /* Info.plist */,
 				CDD86BC12824F13D003FAB1F /* SceneDelegate.swift */,
 			);
 			path = GitHubCICD;
@@ -118,6 +117,7 @@
 		CDE56DB328212C8700734604 = {
 			isa = PBXGroup;
 			children = (
+				CDD86BC02824F13D003FAB1F /* Info.plist */,
 				CD984ACD284DCF0400101F9D /* .github */,
 				CDDC7E0E284A2D4D001B68A2 /* provisioning */,
 				CD5E5A8C282D2CD900693A31 /* AppStore_com.CICD.mobileprovision */,
@@ -374,7 +374,7 @@
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 327TPG23FM;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = /Users/Saroj/GitLab/CICD/GitHubCICD/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = allow;
@@ -408,7 +408,7 @@
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 327TPG23FM;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = /Users/Saroj/GitLab/CICD/GitHubCICD/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = allow;
