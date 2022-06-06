@@ -32,7 +32,6 @@ jobs:
       with:
         ruby-version: 3.0.0
         bundler-cache: false
-        
     - name: Decrypt large secret
       run: ./provisioning/import_provisioning.sh
       env:
@@ -40,9 +39,9 @@ jobs:
     
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode.app && /usr/bin/xcodebuild -version
-    
-     - name: Setup fastlane
-       run: sudo gem install fastlane
+      
+    - name: Setup fastlane
+      run: sudo gem install fastlane
       
     - name: Increment Build Number
       run: fastlane beta
