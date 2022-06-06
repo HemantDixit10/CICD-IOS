@@ -62,9 +62,11 @@ version = get_version_number
           export_options: {
             method: "app-store",
             signingStyle: "manual",
+            manageAppVersionAndBuildNumber: true,
             provisioningProfiles: {
               "com.CICD" => "match AppStore com.CICD"
             }
+            
           },
           output_name: "GitHubCICD.ipa",
           export_xcargs:"-UseModernBuildSystem=YES"
