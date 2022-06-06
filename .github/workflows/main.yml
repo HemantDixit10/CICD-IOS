@@ -39,6 +39,9 @@ jobs:
     
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode.app && /usr/bin/xcodebuild -version
+    
+     - name: Setup fastlane
+      run: sudo gem install fastlane
       
     - name: Increment Build Number
       run: fastlane beta
