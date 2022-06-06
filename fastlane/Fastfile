@@ -31,12 +31,7 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
       in_house: false
     )
 
-version = get_version_number
-  build = increment_build_number
-  commit_version_bump(
-    xcodeproj:"GitHubCICD.xcodeproj",
-    message: "[ver++] v#{version} (#{build})"
-  )
+  increment_build_number
 
     update_code_signing_settings(path: "GitHubCICD.xcodeproj",
           team_id: "327TPG23FM"
