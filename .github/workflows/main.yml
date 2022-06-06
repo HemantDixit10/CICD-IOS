@@ -39,8 +39,9 @@ jobs:
     
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode.app && /usr/bin/xcodebuild -version
+      
     - name: Increment Build Number
-      run: xcrun agvtool next-version -all
+      run: fastlane beta
       
     - name: Build archive
       run: xcodebuild -sdk iphoneos -project GitHubCICD.xcodeproj -configuration Release -scheme GitHubCICD -derivedDataPath DerivedData -archivePath DerivedData/Archive/GitHubCICD archive
