@@ -38,7 +38,7 @@ jobs:
         PROVISIONING_PASSWORD: ${{ secrets.PROVISIONING_PASSWORD }}
     
     - name: Select Xcode
-      run: sudo xcode-select -switch /Applications/Xcode.app && /usr/bin/xcodebuild -version
+      run: sudo xcode-select -switch /Applications/Xcode.app 
       
     - name: Setup fastlane
       run: sudo gem install fastlane
