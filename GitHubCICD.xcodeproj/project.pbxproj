@@ -26,6 +26,8 @@
 		CDDC7E16284A2D4D001B68A2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CDDC7E11284A2D4D001B68A2 /* README.md */; };
 		CDDC7E17284A2D4D001B68A2 /* AppStore_com.CICD.mobileprovision.gpg in Resources */ = {isa = PBXBuildFile; fileRef = CDDC7E12284A2D4D001B68A2 /* AppStore_com.CICD.mobileprovision.gpg */; };
 		CDDC7E18284A2D4D001B68A2 /* import_provisioning.sh in Resources */ = {isa = PBXBuildFile; fileRef = CDDC7E13284A2D4D001B68A2 /* import_provisioning.sh */; };
+		CDE52DAB284E167200905711 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = CDD86BC02824F13D003FAB1F /* Info.plist */; };
+		CDE52DAC284E168900905711 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDD86BC02824F13D003FAB1F /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,7 +90,6 @@
 				CDD86BBB2824F13D003FAB1F /* LaunchScreen.storyboard */,
 				CDD86BBD2824F13D003FAB1F /* Main.storyboard */,
 				CDD86BBF2824F13D003FAB1F /* AppDelegate.swift */,
-				CDD86BC02824F13D003FAB1F /* Info.plist */,
 				CDD86BC12824F13D003FAB1F /* SceneDelegate.swift */,
 			);
 			path = GitHubCICD;
@@ -121,6 +122,7 @@
 		CDE56DB328212C8700734604 = {
 			isa = PBXGroup;
 			children = (
+				CDD86BC02824F13D003FAB1F /* Info.plist */,
 				CD984ACD284DCF0400101F9D /* .github */,
 				CDDC7E0E284A2D4D001B68A2 /* provisioning */,
 				CD5E5A8C282D2CD900693A31 /* AppStore_com.CICD.mobileprovision */,
@@ -198,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE52DAC284E168900905711 /* Info.plist in Resources */,
 				CDDC6DD4282A284600A174B0 /* Gemfile.lock in Resources */,
 				CDDC7E17284A2D4D001B68A2 /* AppStore_com.CICD.mobileprovision.gpg in Resources */,
 				CD00F4D3282A8BEC0015A227 /* Gemfile in Resources */,
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE52DAB284E167200905711 /* Info.plist in Sources */,
 				CDD86BC82824F13E003FAB1F /* ViewController.swift in Sources */,
 				CDD86BCC2824F13E003FAB1F /* AppDelegate.swift in Sources */,
 				CDD86BCE2824F13E003FAB1F /* SceneDelegate.swift in Sources */,
