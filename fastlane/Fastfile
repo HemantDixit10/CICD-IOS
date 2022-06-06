@@ -30,8 +30,9 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
       duration: 1200,
       in_house: false
     )
-    increment_build_number(xcodeproj: "GitHubCICD.xcodeproj")
-        
+      increment_build_number({
+  build_number: latest_testflight_build_number + 1
+})
    
     update_code_signing_settings(path: "GitHubCICD.xcodeproj",
           team_id: "327TPG23FM"
