@@ -44,13 +44,7 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
       value: version
     )
     
-    # Commit modified files
-    git_commit(
-        path: [
-          "GitHubCICD/Info.plist"
-        ],
-        message: "CICD Version #{version} 🚀"
-    )
+   
     
     update_code_signing_settings(path: "GitHubCICD.xcodeproj",
           team_id: "327TPG23FM"
