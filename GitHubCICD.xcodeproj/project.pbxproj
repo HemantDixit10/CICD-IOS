@@ -389,7 +389,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 9;
+				MARKETING_VERSION = 10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CICD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.CICD";
@@ -425,7 +425,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 9;
+				MARKETING_VERSION = 10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CICD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "4faef181-a03c-4c1e-820b-3ef4eb274fbf";
