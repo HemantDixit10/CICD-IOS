@@ -38,9 +38,12 @@ version = get_version_number(
 )
 
 
+latestBuildNumber = latest_testflight_build_number(version: version)
+
+newBuildNumber = ((latestBuildNumber.is_a? String) ? latestBuildNumber.to_i : latestBuildNumber) + 0.1
 
     increment_build_number({
-        build_number: latest_testflight_build_number(version: version) +  0.1
+        build_number:  newBuildNumber
     })
 
     
