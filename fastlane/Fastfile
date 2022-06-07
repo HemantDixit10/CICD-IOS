@@ -14,7 +14,56 @@ GIT_AUTHORIZATION = ENV["GIT_AUTHORIZATION"]
 
 
 
-platform :ios do 
+platform :ios do
+
+desc "Choose release name"
+  private_lane :determine_release_name do
+    current_build_number = latest_testflight_build_number(api_key: lane_context[SharedValues::APP_STORE_CONNECT_API_KEY])
+    current_version = lane_context[SharedValues::LATEST_TESTFLIGHT_VERSION]
+
+    parts = current_version.split(".")
+
+    major = parts[0]
+    minor = parts[1]
+    patch = parts[2]
+
+    target_major = (major.to_i + 1).to_s + ".0.0"
+    target_minor = major + "." + (minor.to_i + 1).to_s + ".0"
+    target_patch = major + "." + minor + "." + (patch.to_i + 1).to_s
+
+    selected_version_ok = false
+
+    while selected_version_ok === false
+      target_version_label = UI.select("What version do you want to use?", [
+        "KEEP EXISTING (#{current_version})",
+        "Bump patch (#{target_patch})",
+        "Bump minor (#{target_minor})",
+        "Bump major (#{target_major})",
+        "CUSTOM",
+      ])
+
+      if target_version_label.match(/CUSTOM/)
+        custom_version = prompt(text: "\nEnter New Version Number:")
+
+        if custom_version < current_version
+          UI.important "Wahaha, version (#{custom_version}) can't lower than the current version (#{current_version})"
+        else
+          selected_version_ok = true
+        end
+      else
+        selected_version_ok = true
+      end
+    end
+
+    next { version: target_major, type: "major" } if target_version_label.match(/major/)
+    next { version: target_minor, type: "minor" } if target_version_label.match(/minor/)
+    next { version: target_patch, type: "patch" } if target_version_label.match(/patch/)
+    next { version: current_version, type: "current" } if target_version_label.match(/KEEP/)
+
+    { version: custom_version, type: "custom" }
+  end
+
+
   lane :beta do
   
   
@@ -31,28 +80,23 @@ r/QsbuQCywYT06REWJ0g33iVMaJSQTuuAyHyFakF3uSVAD2qC1+Nd8Tf2qu96vAq
       in_house: false
     )
 
+new_version = determine_release_name
 
-version = get_version_number(
-  xcodeproj: "GitHubCICD.xcodeproj",
-  target: "GitHubCICD"
-)
+    if new_version[:type] === "current"
+      # get latest build number from App Store
+      build_num = app_store_build_number(
+        initial_build_number: 1,
+        live: false,
+        version: get_version_number(xcodeproj: "GitHubCICD.xcodeproj", target: "GitHubCICD"),
+        api_key: api_key,
+      )
 
-
-latestBuildNumber = latest_testflight_build_number(version: version)
-
-newBuildNumber = ((latestBuildNumber.is_a? String) ? latestBuildNumber.to_.f : latestBuildNumber) + 0.1
-
-    increment_build_number({
-        build_number:  newBuildNumber
-    })
-
+      increment_build_number(build_number: build_num + 1, xcodeproj:  "GitHubCICD.xcodeproj")
+    else
+      increment_version_number(version_number: new_version[:version], xcodeproj:  "GitHubCICD.xcodeproj")
+    end
     
-        # Set Example plist version
-    set_info_plist_value(
-      path: "GitHubCICD/Info.plist",
-      key: "CFBundleShortVersionString",
-      value: version
-    )
+
     
     update_code_signing_settings(path: "GitHubCICD.xcodeproj",
           team_id: "327TPG23FM"
