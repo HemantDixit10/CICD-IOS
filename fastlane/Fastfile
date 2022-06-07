@@ -38,17 +38,10 @@ version = get_version_number(
 )
 
 
-build_number = get_build_number(xcodeproj: "GitHubCICD.xcodeproj")
 
-if build_number == 0 {
 increment_build_number({
   build_number: latest_testflight_build_number(version: version)
 })
-} else {
-    increment_build_number({
-  build_number: latest_testflight_build_number(version: version) + 1
-    })
-}
 
     set_build_number_repository
 
