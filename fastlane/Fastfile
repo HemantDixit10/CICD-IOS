@@ -43,9 +43,6 @@ increment_build_number({
   build_number: latest_testflight_build_number(version: version)
 })
 
-    set_build_number_repository
-
-    
         # Set Example plist version
     set_info_plist_value(
       path: "GitHubCICD/Info.plist",
