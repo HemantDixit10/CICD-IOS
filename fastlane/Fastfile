@@ -43,10 +43,9 @@ version = get_version_number(
       key: "CFBundleShortVersionString",
       value: version
     )
-          build_number = latest_testflight_build_number(version: version)
     
-      build_number =  increment_build_number({
-  build_number: build_number + 1
+increment_build_number({
+  build_number: latest_testflight_build_number(version: version) + 1
 })
 
     
