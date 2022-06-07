@@ -45,13 +45,12 @@ version = get_version_number(
     )
     
     build_number = get_build_number(xcodeproj: "GitHubCICD.xcodeproj")
-        build_number = build_number + 1
     
     # Set Example plist Build
     set_info_plist_value(
       path: "GitHubCICD/Info.plist",
       key: "CFBundleVersion",
-      value: "build_number"
+      value: build_number
     )
     
     update_code_signing_settings(path: "GitHubCICD.xcodeproj",
