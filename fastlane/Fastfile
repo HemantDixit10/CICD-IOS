@@ -1,4 +1,5 @@
 
+opt_out_usage
 
 default_platform(:ios)
 
@@ -33,10 +34,11 @@ latestBuildNumber = latest_testflight_build_number(version: version)
     
 if (latestBuildNumber.is_a? String)
         puts "latestBuildNumber2: '#{latestBuildNumber.to_f.round(2)}'"
-else if (latestBuildNumber.is_a? (Integer))
+elsif (latestBuildNumber.is_a? (Integer))
         puts "latestBuildNumber3: '#{latestBuildNumber.to_f.round(2)}'"
 else
         puts "latestBuildNumber4: '#{latestBuildNumber}'"
+end
 
 newBuildNumber = ((latestBuildNumber.is_a? String) ? latestBuildNumber.to_f.round(2) :  (latestBuildNumber.is_a?(Integer) ? latestBuildNumber.to_f.round(2) : latestBuildNumber.to_f.round(2))) + 0.1
 
