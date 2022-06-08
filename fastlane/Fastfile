@@ -28,10 +28,20 @@ version = get_version_number(
 
 
 latestBuildNumber = latest_testflight_build_number(version: version)
-echo $latestBuildNumber
+
+    puts "latestBuildNumber1: '#{latestBuildNumber}'"
+    
+if (latestBuildNumber.is_a? String)
+        puts "latestBuildNumber2: '#{latestBuildNumber.to_f.round(2)}'"
+else if (latestBuildNumber.is_a? (Integer))
+        puts "latestBuildNumber3: '#{latestBuildNumber.to_f.round(2)}'"
+else
+        puts "latestBuildNumber4: '#{latestBuildNumber}'"
 
 newBuildNumber = ((latestBuildNumber.is_a? String) ? latestBuildNumber.to_f.round(2) :  (latestBuildNumber.is_a?(Integer) ? latestBuildNumber.to_f.round(2) : latestBuildNumber.to_f.round(2))) + 0.1
 
+    puts "latestBuildNumber5: '#{newBuildNumber}'"
+    
     increment_build_number({
         build_number:  newBuildNumber
     })
