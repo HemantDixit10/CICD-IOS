@@ -44,6 +44,10 @@ newBuildNumber = ((latestBuildNumber.is_a? String) ? latestBuildNumber.to_f.roun
 
     puts "latestBuildNumber5: '#{newBuildNumber}'"
     
+setBuildNumber = newBuildNumber.to_f.round(2)
+
+    puts "setBuildNumber: '#{setBuildNumber}'"
+
     increment_build_number({
         build_number:  newBuildNumber
     })
