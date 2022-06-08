@@ -28,6 +28,7 @@ version = get_version_number(
 
 
 latestBuildNumber = latest_testflight_build_number(version: version)
+echo $latestBuildNumber
 
 newBuildNumber = ((latestBuildNumber.is_a? String) ? latestBuildNumber.to_f.round(2) :  (latestBuildNumber.is_a?(Integer) ? latestBuildNumber.to_f.round(2) : latestBuildNumber.to_f.round(2))) + 0.1
 
