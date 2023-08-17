@@ -7,31 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD00F4D3282A8BEC0015A227 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = CD00F4D2282A8BEC0015A227 /* Gemfile */; };
-		CD5E5A8A282CCA6300693A31 /* Matchfile in Resources */ = {isa = PBXBuildFile; fileRef = CD5E5A89282CCA6300693A31 /* Matchfile */; };
-		CD984AD0284DCF0400101F9D /* main.yml in Resources */ = {isa = PBXBuildFile; fileRef = CD984ACF284DCF0400101F9D /* main.yml */; };
 		CDD86BC82824F13E003FAB1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD86BB92824F13D003FAB1F /* ViewController.swift */; };
 		CDD86BC92824F13E003FAB1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDD86BBA2824F13D003FAB1F /* Assets.xcassets */; };
 		CDD86BCA2824F13E003FAB1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD86BBB2824F13D003FAB1F /* LaunchScreen.storyboard */; };
 		CDD86BCB2824F13E003FAB1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD86BBD2824F13D003FAB1F /* Main.storyboard */; };
 		CDD86BCC2824F13E003FAB1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD86BBF2824F13D003FAB1F /* AppDelegate.swift */; };
 		CDD86BCE2824F13E003FAB1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD86BC12824F13D003FAB1F /* SceneDelegate.swift */; };
-		CDDC6DD0282A284600A174B0 /* Appfile in Resources */ = {isa = PBXBuildFile; fileRef = CDDC6DCB282A284600A174B0 /* Appfile */; };
-		CDDC6DD1282A284600A174B0 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = CDDC6DCC282A284600A174B0 /* Fastfile */; };
-		CDDC6DD4282A284600A174B0 /* Gemfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = CDDC6DCF282A284600A174B0 /* Gemfile.lock */; };
-		CDDC6DD6282A47A100A174B0 /* Gymfile in Resources */ = {isa = PBXBuildFile; fileRef = CDDC6DD5282A47A100A174B0 /* Gymfile */; };
-		CDDC7E14284A2D4D001B68A2 /* AppStoreCICD.p12.gpg in Resources */ = {isa = PBXBuildFile; fileRef = CDDC7E0F284A2D4D001B68A2 /* AppStoreCICD.p12.gpg */; };
-		CDDC7E15284A2D4D001B68A2 /* App-Store.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDDC7E10284A2D4D001B68A2 /* App-Store.plist */; };
-		CDDC7E16284A2D4D001B68A2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CDDC7E11284A2D4D001B68A2 /* README.md */; };
-		CDDC7E17284A2D4D001B68A2 /* AppStore_com.CICD.mobileprovision.gpg in Resources */ = {isa = PBXBuildFile; fileRef = CDDC7E12284A2D4D001B68A2 /* AppStore_com.CICD.mobileprovision.gpg */; };
-		CDDC7E18284A2D4D001B68A2 /* import_provisioning.sh in Resources */ = {isa = PBXBuildFile; fileRef = CDDC7E13284A2D4D001B68A2 /* import_provisioning.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CD00F4D2282A8BEC0015A227 /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
-		CD5E5A89282CCA6300693A31 /* Matchfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Matchfile; sourceTree = "<group>"; };
-		CD5E5A8C282D2CD900693A31 /* AppStore_com.CICD.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppStore_com.CICD.mobileprovision; sourceTree = "<group>"; };
-		CD984ACF284DCF0400101F9D /* main.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = main.yml; sourceTree = "<group>"; };
 		CDD86BB92824F13D003FAB1F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CDD86BBA2824F13D003FAB1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDD86BBC2824F13D003FAB1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,15 +23,6 @@
 		CDD86BBF2824F13D003FAB1F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDD86BC02824F13D003FAB1F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDD86BC12824F13D003FAB1F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CDDC6DCB282A284600A174B0 /* Appfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
-		CDDC6DCC282A284600A174B0 /* Fastfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
-		CDDC6DCF282A284600A174B0 /* Gemfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
-		CDDC6DD5282A47A100A174B0 /* Gymfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gymfile; sourceTree = "<group>"; };
-		CDDC7E0F284A2D4D001B68A2 /* AppStoreCICD.p12.gpg */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppStoreCICD.p12.gpg; sourceTree = "<group>"; };
-		CDDC7E10284A2D4D001B68A2 /* App-Store.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "App-Store.plist"; sourceTree = "<group>"; };
-		CDDC7E11284A2D4D001B68A2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		CDDC7E12284A2D4D001B68A2 /* AppStore_com.CICD.mobileprovision.gpg */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppStore_com.CICD.mobileprovision.gpg; sourceTree = "<group>"; };
-		CDDC7E13284A2D4D001B68A2 /* import_provisioning.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = import_provisioning.sh; sourceTree = "<group>"; };
 		CDE56DBC28212C8700734604 /* GitHubCICD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubCICD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -62,22 +37,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CD984ACD284DCF0400101F9D /* .github */ = {
-			isa = PBXGroup;
-			children = (
-				CD984ACE284DCF0400101F9D /* workflows */,
-			);
-			path = .github;
-			sourceTree = "<group>";
-		};
-		CD984ACE284DCF0400101F9D /* workflows */ = {
-			isa = PBXGroup;
-			children = (
-				CD984ACF284DCF0400101F9D /* main.yml */,
-			);
-			path = workflows;
-			sourceTree = "<group>";
-		};
 		CDD86BB82824F13D003FAB1F /* GitHubCICD */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,38 +51,9 @@
 			path = GitHubCICD;
 			sourceTree = "<group>";
 		};
-		CDDC6DCA282A284600A174B0 /* fastlane */ = {
-			isa = PBXGroup;
-			children = (
-				CDDC6DCB282A284600A174B0 /* Appfile */,
-				CDDC6DCC282A284600A174B0 /* Fastfile */,
-				CDDC6DD5282A47A100A174B0 /* Gymfile */,
-				CD5E5A89282CCA6300693A31 /* Matchfile */,
-			);
-			path = fastlane;
-			sourceTree = "<group>";
-		};
-		CDDC7E0E284A2D4D001B68A2 /* provisioning */ = {
-			isa = PBXGroup;
-			children = (
-				CDDC7E0F284A2D4D001B68A2 /* AppStoreCICD.p12.gpg */,
-				CDDC7E10284A2D4D001B68A2 /* App-Store.plist */,
-				CDDC7E11284A2D4D001B68A2 /* README.md */,
-				CDDC7E12284A2D4D001B68A2 /* AppStore_com.CICD.mobileprovision.gpg */,
-				CDDC7E13284A2D4D001B68A2 /* import_provisioning.sh */,
-			);
-			path = provisioning;
-			sourceTree = "<group>";
-		};
 		CDE56DB328212C8700734604 = {
 			isa = PBXGroup;
 			children = (
-				CD984ACD284DCF0400101F9D /* .github */,
-				CDDC7E0E284A2D4D001B68A2 /* provisioning */,
-				CD5E5A8C282D2CD900693A31 /* AppStore_com.CICD.mobileprovision */,
-				CD00F4D2282A8BEC0015A227 /* Gemfile */,
-				CDDC6DCA282A284600A174B0 /* fastlane */,
-				CDDC6DCF282A284600A174B0 /* Gemfile.lock */,
 				CDD86BB82824F13D003FAB1F /* GitHubCICD */,
 				CDE56DBD28212C8700734604 /* Products */,
 			);
@@ -195,21 +125,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDDC6DD4282A284600A174B0 /* Gemfile.lock in Resources */,
-				CDDC7E17284A2D4D001B68A2 /* AppStore_com.CICD.mobileprovision.gpg in Resources */,
-				CD00F4D3282A8BEC0015A227 /* Gemfile in Resources */,
-				CDDC6DD6282A47A100A174B0 /* Gymfile in Resources */,
-				CDDC7E15284A2D4D001B68A2 /* App-Store.plist in Resources */,
-				CDDC6DD1282A284600A174B0 /* Fastfile in Resources */,
-				CDDC6DD0282A284600A174B0 /* Appfile in Resources */,
-				CDDC7E16284A2D4D001B68A2 /* README.md in Resources */,
 				CDD86BCB2824F13E003FAB1F /* Main.storyboard in Resources */,
-				CDDC7E14284A2D4D001B68A2 /* AppStoreCICD.p12.gpg in Resources */,
 				CDD86BCA2824F13E003FAB1F /* LaunchScreen.storyboard in Resources */,
 				CDD86BC92824F13E003FAB1F /* Assets.xcassets in Resources */,
-				CDDC7E18284A2D4D001B68A2 /* import_provisioning.sh in Resources */,
-				CD5E5A8A282CCA6300693A31 /* Matchfile in Resources */,
-				CD984AD0284DCF0400101F9D /* main.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +291,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = 327TPG23FM;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 327TPG23FM;
 				EXCLUDED_ARCHS = x86_64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GitHubCICD/Info.plist;
@@ -393,6 +312,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.CICD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.CICD";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = CICD_Dis;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -409,6 +329,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = 327TPG23FM;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 327TPG23FM;
 				EXCLUDED_ARCHS = x86_64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GitHubCICD/Info.plist;
@@ -430,6 +351,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "4faef181-a03c-4c1e-820b-3ef4eb274fbf";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.CICD";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = CICD_Dis;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
