@@ -13,6 +13,3 @@
 
 # CocoaPods
 Pods/
-Podfile.lock
-*.xcworkspace/xcshareddata/swiftpm/Package.resolved
-*.xcodeproj/xcuserdata/

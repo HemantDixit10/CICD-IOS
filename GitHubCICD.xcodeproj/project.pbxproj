@@ -8,24 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		A41DD81975DE138C688634B2 /* Pods_GitHubCICD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1F6A43B1775BDCEE3837FBB /* Pods_GitHubCICD.framework */; };
-		CDD86BC82824F13E003FAB1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD86BB92824F13D003FAB1F /* ViewController.swift */; };
+		CDD86BC82824F13E003FAB1F /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD86BB92824F13D003FAB1F /* MainController.swift */; };
 		CDD86BC92824F13E003FAB1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDD86BBA2824F13D003FAB1F /* Assets.xcassets */; };
 		CDD86BCA2824F13E003FAB1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD86BBB2824F13D003FAB1F /* LaunchScreen.storyboard */; };
 		CDD86BCB2824F13E003FAB1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD86BBD2824F13D003FAB1F /* Main.storyboard */; };
 		CDD86BCC2824F13E003FAB1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD86BBF2824F13D003FAB1F /* AppDelegate.swift */; };
-		CDD86BCE2824F13E003FAB1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD86BC12824F13D003FAB1F /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		776261F10967CBA4255734D1 /* Pods-GitHubCICD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubCICD.release.xcconfig"; path = "Target Support Files/Pods-GitHubCICD/Pods-GitHubCICD.release.xcconfig"; sourceTree = "<group>"; };
 		90E1853491CA5D2E9C0FF418 /* Pods-GitHubCICD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubCICD.debug.xcconfig"; path = "Target Support Files/Pods-GitHubCICD/Pods-GitHubCICD.debug.xcconfig"; sourceTree = "<group>"; };
-		CDD86BB92824F13D003FAB1F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CDD86BB92824F13D003FAB1F /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		CDD86BBA2824F13D003FAB1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDD86BBC2824F13D003FAB1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDD86BBE2824F13D003FAB1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CDD86BBF2824F13D003FAB1F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDD86BC02824F13D003FAB1F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDD86BC12824F13D003FAB1F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CDE56DBC28212C8700734604 /* GitHubCICD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubCICD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1F6A43B1775BDCEE3837FBB /* Pods_GitHubCICD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubCICD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -54,12 +52,11 @@
 			isa = PBXGroup;
 			children = (
 				CDD86BC02824F13D003FAB1F /* Info.plist */,
-				CDD86BB92824F13D003FAB1F /* ViewController.swift */,
+				CDD86BB92824F13D003FAB1F /* MainController.swift */,
 				CDD86BBA2824F13D003FAB1F /* Assets.xcassets */,
 				CDD86BBB2824F13D003FAB1F /* LaunchScreen.storyboard */,
 				CDD86BBD2824F13D003FAB1F /* Main.storyboard */,
 				CDD86BBF2824F13D003FAB1F /* AppDelegate.swift */,
-				CDD86BC12824F13D003FAB1F /* SceneDelegate.swift */,
 			);
 			path = GitHubCICD;
 			sourceTree = "<group>";
@@ -206,9 +203,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDD86BC82824F13E003FAB1F /* ViewController.swift in Sources */,
+				CDD86BC82824F13E003FAB1F /* MainController.swift in Sources */,
 				CDD86BCC2824F13E003FAB1F /* AppDelegate.swift in Sources */,
-				CDD86BCE2824F13E003FAB1F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +281,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -340,7 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -372,7 +368,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -411,7 +407,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
