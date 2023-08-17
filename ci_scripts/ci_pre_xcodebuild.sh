@@ -4,7 +4,14 @@
 #  GitHubCICD
 #
 #  Created by tristate22 on 17.08.23.
-#  
+#
+# Install CocoaPods using Homebrew.
+sudo gem install cocoapods
+
+# Install dependencies you manage with CocoaPods.
+
+pod install
+
  echo "🧩 Stage: PRE-Xcode Build is activated .... "
 
  # You can add additional scripts here...
