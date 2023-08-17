@@ -88,7 +88,6 @@
 				90E1853491CA5D2E9C0FF418 /* Pods-GitHubCICD.debug.xcconfig */,
 				776261F10967CBA4255734D1 /* Pods-GitHubCICD.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -103,6 +102,7 @@
 				CDE56DB828212C8700734604 /* Sources */,
 				CDE56DB928212C8700734604 /* Frameworks */,
 				CDE56DBA28212C8700734604 /* Resources */,
+				AAFE105554A47F83D1E9B927 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,6 +180,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAFE105554A47F83D1E9B927 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitHubCICD/Pods-GitHubCICD-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitHubCICD/Pods-GitHubCICD-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GitHubCICD/Pods-GitHubCICD-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -360,7 +377,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 26;
+				MARKETING_VERSION = 29;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CICD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.CICD";
@@ -399,7 +416,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 26;
+				MARKETING_VERSION = 29;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CICD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "4faef181-a03c-4c1e-820b-3ef4eb274fbf";

@@ -6,6 +6,6 @@ target 'GitHubCICD' do
   use_frameworks!
 
   # Pods for GitHubCICD
-#	pod 'SDWebImage'
+	pod 'SDWebImage'
 
 end
