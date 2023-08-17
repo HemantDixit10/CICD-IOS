@@ -5,7 +5,6 @@
 #
 #  Created by tristate22 on 17.08.23.
 #  
-
 cd ..
 
 echo ">>> SETUP ENVIRONMENT"
