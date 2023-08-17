@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52AD82792A8E1C5000FE84E0 /* ci_post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_clone.sh; sourceTree = "<group>"; };
 		776261F10967CBA4255734D1 /* Pods-GitHubCICD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubCICD.release.xcconfig"; path = "Target Support Files/Pods-GitHubCICD/Pods-GitHubCICD.release.xcconfig"; sourceTree = "<group>"; };
 		90E1853491CA5D2E9C0FF418 /* Pods-GitHubCICD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubCICD.debug.xcconfig"; path = "Target Support Files/Pods-GitHubCICD/Pods-GitHubCICD.debug.xcconfig"; sourceTree = "<group>"; };
 		CDD86BB92824F13D003FAB1F /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -40,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52AD82782A8E1C1D00FE84E0 /* ci_scripts */ = {
+			isa = PBXGroup;
+			children = (
+				52AD82792A8E1C5000FE84E0 /* ci_post_clone.sh */,
+			);
+			path = ci_scripts;
+			sourceTree = "<group>";
+		};
 		BBFDB18D4F4EB42400C34563 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +73,7 @@
 		CDE56DB328212C8700734604 = {
 			isa = PBXGroup;
 			children = (
+				52AD82782A8E1C1D00FE84E0 /* ci_scripts */,
 				CDD86BB82824F13D003FAB1F /* GitHubCICD */,
 				CDE56DBD28212C8700734604 /* Products */,
 				FF9A49A0439109757F337EDF /* Pods */,
