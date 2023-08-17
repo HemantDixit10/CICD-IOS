@@ -1,0 +1,6 @@
+framework module Pods_GitHubCICD {
+  umbrella header "Pods-GitHubCICD-umbrella.h"
+
+  export *
+  module * { export * }
+}
