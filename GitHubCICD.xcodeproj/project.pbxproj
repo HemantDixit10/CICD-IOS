@@ -17,8 +17,6 @@
 
 /* Begin PBXFileReference section */
 		52AD82792A8E1C5000FE84E0 /* ci_post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_clone.sh; sourceTree = "<group>"; };
-		52AD827A2A8E1F5600FE84E0 /* ci_pre_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_pre_xcodebuild.sh; sourceTree = "<group>"; };
-		52AD827B2A8E1FC900FE84E0 /* ci_post_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_xcodebuild.sh; sourceTree = "<group>"; };
 		776261F10967CBA4255734D1 /* Pods-GitHubCICD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubCICD.release.xcconfig"; path = "Target Support Files/Pods-GitHubCICD/Pods-GitHubCICD.release.xcconfig"; sourceTree = "<group>"; };
 		90E1853491CA5D2E9C0FF418 /* Pods-GitHubCICD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubCICD.debug.xcconfig"; path = "Target Support Files/Pods-GitHubCICD/Pods-GitHubCICD.debug.xcconfig"; sourceTree = "<group>"; };
 		CDD86BB92824F13D003FAB1F /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -47,8 +45,6 @@
 			isa = PBXGroup;
 			children = (
 				52AD82792A8E1C5000FE84E0 /* ci_post_clone.sh */,
-				52AD827A2A8E1F5600FE84E0 /* ci_pre_xcodebuild.sh */,
-				52AD827B2A8E1FC900FE84E0 /* ci_post_xcodebuild.sh */,
 			);
 			path = ci_scripts;
 			sourceTree = "<group>";
