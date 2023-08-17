@@ -10,7 +10,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "cd ${PROJECT_DIR}&#10;&#10;test -e Pods || pod install &amp;&amp; sleep 30&#10;">
+               scriptText = "cd ${PROJECT_DIR}&#10;&#10;test -e Pods || pod install&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
@@ -92,5 +92,23 @@
    <ArchiveAction
       buildConfiguration = "Release"
       revealArchiveInOrganizer = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "cd ${PROJECT_DIR}&#10;&#10;test -e Pods || pod install &amp;&amp; sleep 30&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "CDE56DBB28212C8700734604"
+                     BuildableName = "GitHubCICD.app"
+                     BlueprintName = "GitHubCICD"
+                     ReferencedContainer = "container:GitHubCICD.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
    </ArchiveAction>
 </Scheme>
