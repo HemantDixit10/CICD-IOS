@@ -10,7 +10,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "cd ${PROJECT_DIR}&#10;&#10;test -e Pods || pod install&#10;">
+               scriptText = "# cd to where your Podfile is&#10;cd ${XCS_PRIMARY_REPO_DIR}&#10;&#10;# add to the path, or explicitly add the path to your `pod` call&#10;export PATH=/usr/local/bin:$PATH&#10;pod install&#10;&#10;wait&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
