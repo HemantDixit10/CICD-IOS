@@ -15,4 +15,4 @@ echo ">>> install Pods"
 
 pod install
 
-xcodebuild -resolvePackageDependencies
+swift package update
