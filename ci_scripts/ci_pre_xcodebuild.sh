@@ -9,3 +9,5 @@
 echo ">>> SETUP Package"
 
 xcodebuild -resolvePackageDependencies
+swift package update
+
