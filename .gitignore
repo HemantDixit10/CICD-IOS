@@ -13,3 +13,5 @@
 
 # CocoaPods
 Pods/
+*.xcworkspace/xcshareddata/swiftpm/Package.resolved
+*.xcodeproj/xcuserdata/
