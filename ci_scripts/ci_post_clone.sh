@@ -16,3 +16,10 @@ echo ">>> install Pods"
 pod install
 
 #brew install swift-package-list
+echo ">>> swift-package-list"
+if command -v swift-package-list &> /dev/null; then
+    OUTPUT_PATH=$SOURCE_ROOT/$TARGETNAME
+    swift-package-list generate "$PROJECT_FILE_PATH" --output-path "$OUTPUT_PATH" --requires-license
+else
+    echo "warning: swift-package-list not installed"
+fi

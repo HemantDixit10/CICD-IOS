@@ -112,7 +112,6 @@
 				445670153828CA0ABBCDB53C /* [CP] Check Pods Manifest.lock */,
 				CDE56DB828212C8700734604 /* Sources */,
 				CDE56DB928212C8700734604 /* Frameworks */,
-				52552F522A8F715300F971EC /* ShellScript */,
 				CDE56DBA28212C8700734604 /* Resources */,
 				AAFE105554A47F83D1E9B927 /* [CP] Embed Pods Frameworks */,
 			);
@@ -199,23 +198,6 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
-		};
-		52552F522A8F715300F971EC /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if command -v swift-package-list &> /dev/null; then\n    OUTPUT_PATH=$SOURCE_ROOT/$TARGETNAME\n    swift-package-list generate \"$PROJECT_FILE_PATH\" --output-path \"$OUTPUT_PATH\" --requires-license\nelse\n    echo \"warning: swift-package-list not installed\"\nfi\n";
 		};
 		AAFE105554A47F83D1E9B927 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
