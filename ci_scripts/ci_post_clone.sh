@@ -14,3 +14,5 @@ brew install cocoapods
 echo ">>> install Pods"
 
 pod install
+
+xcodebuild -resolvePackageDependencies
