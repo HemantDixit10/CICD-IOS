@@ -15,4 +15,3 @@ echo ">>> install Pods"
 
 pod install
 
-xcodebuild -resolvePackageDependencies -workspace myworkspace.xcworkspace -scheme GitHubCICD scheme
