@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52552F502A8F4F4200F971EC /* CTRating in Frameworks */ = {isa = PBXBuildFile; productRef = 52552F4F2A8F4F4200F971EC /* CTRating */; };
 		A41DD81975DE138C688634B2 /* Pods_GitHubCICD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1F6A43B1775BDCEE3837FBB /* Pods_GitHubCICD.framework */; };
 		CDD86BC82824F13E003FAB1F /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD86BB92824F13D003FAB1F /* MainController.swift */; };
 		CDD86BC92824F13E003FAB1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDD86BBA2824F13D003FAB1F /* Assets.xcassets */; };
@@ -36,7 +35,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52552F502A8F4F4200F971EC /* CTRating in Frameworks */,
 				A41DD81975DE138C688634B2 /* Pods_GitHubCICD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,7 +119,6 @@
 			);
 			name = GitHubCICD;
 			packageProductDependencies = (
-				52552F4F2A8F4F4200F971EC /* CTRating */,
 			);
 			productName = GitHubCICD;
 			productReference = CDE56DBC28212C8700734604 /* GitHubCICD.app */;
@@ -152,7 +149,6 @@
 			);
 			mainGroup = CDE56DB328212C8700734604;
 			packageReferences = (
-				52552F4E2A8F4F4200F971EC /* XCRemoteSwiftPackageReference "CTRating" */,
 			);
 			productRefGroup = CDE56DBD28212C8700734604 /* Products */;
 			projectDirPath = "";
@@ -468,25 +464,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		52552F4E2A8F4F4200F971EC /* XCRemoteSwiftPackageReference "CTRating" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/StewartLynch/CTRating";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		52552F4F2A8F4F4200F971EC /* CTRating */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 52552F4E2A8F4F4200F971EC /* XCRemoteSwiftPackageReference "CTRating" */;
-			productName = CTRating;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CDE56DB428212C8700734604 /* Project object */;
 }

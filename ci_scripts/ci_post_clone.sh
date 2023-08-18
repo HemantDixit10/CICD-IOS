@@ -14,7 +14,3 @@ brew install cocoapods
 echo ">>> install Pods"
 
 pod install
-
-#brew install swift-package-list
-echo ">>> swift-package-list"
-.xcworkspace/xcshareddata/swiftpm/Package.resolved
