@@ -15,3 +15,4 @@ echo ">>> install Pods"
 
 pod install
 
+brew install swift-package-list
