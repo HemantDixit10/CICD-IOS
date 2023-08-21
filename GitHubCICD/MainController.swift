@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CTRating
 
 class MainController: UIViewController {
 
