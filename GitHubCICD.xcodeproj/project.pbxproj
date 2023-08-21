@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52C708732A93390E0087A190 /* ResearchKit.modulemap in Headers */ = {isa = PBXBuildFile; fileRef = 52C708722A93390E0087A190 /* ResearchKit.modulemap */; settings = {ATTRIBUTES = (Public, ); }; };
 		A41DD81975DE138C688634B2 /* Pods_GitHubCICD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1F6A43B1775BDCEE3837FBB /* Pods_GitHubCICD.framework */; };
 		CDD86BC82824F13E003FAB1F /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD86BB92824F13D003FAB1F /* MainController.swift */; };
 		CDD86BC92824F13E003FAB1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDD86BBA2824F13D003FAB1F /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		52552F512A8F56CE00F971EC /* ci_pre_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_pre_xcodebuild.sh; sourceTree = "<group>"; };
 		52AD82792A8E1C5000FE84E0 /* ci_post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_clone.sh; sourceTree = "<group>"; };
+		52C708722A93390E0087A190 /* ResearchKit.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = ResearchKit.modulemap; path = "Pods/Target Support Files/ResearchKit/ResearchKit.modulemap"; sourceTree = "<group>"; };
 		776261F10967CBA4255734D1 /* Pods-GitHubCICD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubCICD.release.xcconfig"; path = "Target Support Files/Pods-GitHubCICD/Pods-GitHubCICD.release.xcconfig"; sourceTree = "<group>"; };
 		90E1853491CA5D2E9C0FF418 /* Pods-GitHubCICD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubCICD.debug.xcconfig"; path = "Target Support Files/Pods-GitHubCICD/Pods-GitHubCICD.debug.xcconfig"; sourceTree = "<group>"; };
 		CDD86BB92824F13D003FAB1F /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		CDE56DB328212C8700734604 = {
 			isa = PBXGroup;
 			children = (
+				52C708722A93390E0087A190 /* ResearchKit.modulemap */,
 				52AD82782A8E1C1D00FE84E0 /* ci_scripts */,
 				CDD86BB82824F13D003FAB1F /* GitHubCICD */,
 				CDE56DBD28212C8700734604 /* Products */,
@@ -102,12 +105,24 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		52C708712A93386E0087A190 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52C708732A93390E0087A190 /* ResearchKit.modulemap in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		CDE56DBB28212C8700734604 /* GitHubCICD */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDE56DD028212C8C00734604 /* Build configuration list for PBXNativeTarget "GitHubCICD" */;
 			buildPhases = (
 				445670153828CA0ABBCDB53C /* [CP] Check Pods Manifest.lock */,
+				52C708712A93386E0087A190 /* Headers */,
 				CDE56DB828212C8700734604 /* Sources */,
 				CDE56DB928212C8700734604 /* Frameworks */,
 				CDE56DBA28212C8700734604 /* Resources */,

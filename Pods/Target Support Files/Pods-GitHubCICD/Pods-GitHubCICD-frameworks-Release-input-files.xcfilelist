@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-GitHubCICD/Pods-GitHubCICD-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ResearchKit/ResearchKit.framework
 ${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
