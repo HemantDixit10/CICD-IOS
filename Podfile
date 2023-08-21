@@ -7,7 +7,6 @@ target 'GitHubCICD' do
 
   # Pods for GitHubCICD
 	pod 'SDWebImage'
-  pod 'Socket.IO-Client-Swift'
-  pod 'Kingfisher'
+  pod 'ResearchKit', :git => 'https://github.com/ResearchKit/ResearchKit', :tag => '2.1.0'
 
 end
