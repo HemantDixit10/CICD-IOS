@@ -12,6 +12,7 @@ class MainController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("Log data")
+        print("add tag")
     }
 }
 
