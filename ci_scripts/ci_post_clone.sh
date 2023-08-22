@@ -9,7 +9,7 @@ cd ..
 
 echo ">>> SETUP ENVIRONMENT"
 #!/bin/sh
-
+brew install git-lfs
 brew install cocoapods
 echo ">>> install Pods"
 

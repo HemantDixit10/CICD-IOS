@@ -1,31 +1,18 @@
 PODS:
-  - ResearchKit (2.1.0-beta)
   - SDWebImage (5.17.0):
     - SDWebImage/Core (= 5.17.0)
   - SDWebImage/Core (5.17.0)
 
 DEPENDENCIES:
-  - ResearchKit (from `https://github.com/ResearchKit/ResearchKit`, tag `2.1.0`)
   - SDWebImage
 
 SPEC REPOS:
   trunk:
     - SDWebImage
 
-EXTERNAL SOURCES:
-  ResearchKit:
-    :git: https://github.com/ResearchKit/ResearchKit
-    :tag: 2.1.0
-
-CHECKOUT OPTIONS:
-  ResearchKit:
-    :git: https://github.com/ResearchKit/ResearchKit
-    :tag: 2.1.0
-
 SPEC CHECKSUMS:
-  ResearchKit: 145c6c2a272d313a53ab1dc49d84b0d20dde003a
   SDWebImage: 750adf017a315a280c60fde706ab1e552a3ae4e9
 
-PODFILE CHECKSUM: ceb67cb53da57579369c6a7f94b76b7177f43e5e
+PODFILE CHECKSUM: b6c811ca66a7d03f7148c06b6c9bb6ae802b5bb6
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.1
