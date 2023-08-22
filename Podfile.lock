@@ -1,18 +1,22 @@
 PODS:
+  - ResearchKit (2.1.0)
   - SDWebImage (5.17.0):
     - SDWebImage/Core (= 5.17.0)
   - SDWebImage/Core (5.17.0)
 
 DEPENDENCIES:
+  - ResearchKit
   - SDWebImage
 
 SPEC REPOS:
   trunk:
+    - ResearchKit
     - SDWebImage
 
 SPEC CHECKSUMS:
+  ResearchKit: d7fba1d5b00f5dd299373e46727c5940fc5c1890
   SDWebImage: 750adf017a315a280c60fde706ab1e552a3ae4e9
 
-PODFILE CHECKSUM: b6c811ca66a7d03f7148c06b6c9bb6ae802b5bb6
+PODFILE CHECKSUM: aca88bb7cc55c6bd4165e6f563dab3d5966c8bf4
 
 COCOAPODS: 1.12.1
