@@ -7,5 +7,5 @@ target 'GitHubCICD' do
 
   # Pods for GitHubCICD
 	pod 'SDWebImage'
-  	pod 'ResearchKit', :git => 'https://github.com/ResearchKit/ResearchKit.git', :branch => 'master'
+  	pod 'ResearchKit'
 end
